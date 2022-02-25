@@ -14,9 +14,6 @@ class Phonebook {
 		int Search_contacts(void);
 		int Look_for_contacts( int i );
 		int cpp_atoi(std::string str);
-
 };
-
-
 
 #endif

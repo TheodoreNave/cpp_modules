@@ -6,11 +6,11 @@
 #    By: tnave <tnave@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/24 13:23:30 by tnave             #+#    #+#              #
-#    Updated: 2022/02/24 16:08:52 by tnave            ###   ########.fr        #
+#    Updated: 2022/02/25 13:35:05 by tnave            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = contacts
+NAME = phonebook_pro
 
 SRCS = 	main.cpp				\
 		Contact.class.cpp 		\

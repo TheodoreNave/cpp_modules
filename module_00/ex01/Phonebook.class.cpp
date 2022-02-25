@@ -2,18 +2,17 @@
 // Author: tnave
 
 #include "Phonebook.class.hpp"
-#include <stdio.h>
+
 Phonebook::Phonebook( void ) {
 
-	// std::cout << "Here come the constructor" << std::endl;
 	return ;
-
 }
 
 int Phonebook::Search_contacts( void ) {
 
-	int i = 0;
+	int i;
 
+	i = 0;
 	while (i < 8)
 	{
 		this->all_contacts[i].print_values();
@@ -22,8 +21,8 @@ int Phonebook::Search_contacts( void ) {
 	return 0;
 }
 
-int Phonebook::cpp_atoi(std::string str)
-{
+int Phonebook::cpp_atoi(std::string str) {
+
 	long int	i;
 	long int	res;
 	long int	sign;
@@ -52,23 +51,22 @@ int Phonebook::cpp_atoi(std::string str)
 int Phonebook::Look_for_contacts ( int i ) {
 
 	std::string val;
-	std::cout << "Enter index to find contacts : ";
-	std::getline(std::cin, val);
 
-	int num = cpp_atoi(val);
-	printf("num == %d\n", num);
-	if (num > 0 && num < i + 1)
-		return (num);
-	else
-		std::cout << "No contact found ! Try again !" << std::endl;
+	while (1) {
 
-	std::cout << "this is num = " << num << std::endl;
+		std::cout << "Enter index to find contacts : ";
+		std::getline(std::cin, val);
+
+		int num = cpp_atoi(val);
+		if (num > 0 && num < i + 1)
+			return (num);
+		else
+			std::cout << "No contact found !" << std::endl;
+	}
 	return 0;
 }
 
 Phonebook::~Phonebook( void ) {
 
-	// std::cout << "Here come the destructor" << std::endl;
 	return ;
-
 }

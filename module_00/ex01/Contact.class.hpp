@@ -8,11 +8,13 @@ class Contact {
 
 	public:
 
-		Contact( void );
-		~Contact( void );
-		int add_in_phonebook( int i );
-		void print_values( void );
+		Contact(void);
+		~Contact(void);
+
+		int add_in_phonebook(int i);
+		void print_values(void);
 		void print_contact(void);
+
 	private:
 
 		static int _id;

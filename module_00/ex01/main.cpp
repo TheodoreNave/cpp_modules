@@ -3,17 +3,23 @@
 
 #include "Phonebook.class.hpp"
 #include <iostream>
-#include <stdio.h>
 
 int main() {
 
 	Phonebook repertoire;
 	std::string cmd;
-	int i = 0;
-	int index = 0;
+	int i;
+	int index;
 
-	while(1) {
-
+	i = 0;
+	index = 0;
+	std::cout << "⟅-------------------------------------------⟅" << std::endl;
+	std::cout << "|               PHONEBOOK-PRO               |" << std::endl;
+	std::cout << "⟅-------------------------------------------⟅" << std::endl;
+	std::cout << "|   Enter command [ADD] / [SEARCH] / [EXIT] |" << std::endl;
+	std::cout << "⟅-------------------------------------------⟅" << std::endl;
+	while(1)
+	{
 		std::cout << "Entrez une commande : ";
 		std::getline(std::cin, cmd);
 		if (cmd.compare("ADD") == 0)
@@ -30,10 +36,10 @@ int main() {
 		{
 			if (i == 0)
 				std::cout << "Empty contacts list, use ADD to add contacts" << std::endl;
-			else {
+			else
+			{
 				repertoire.Search_contacts();
 				index = repertoire.Look_for_contacts(i);
-				printf("index = %d\n", index);
 				if (index)
 					repertoire.all_contacts[index - 1].print_contact();
 			}
