@@ -7,9 +7,10 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME = megaphone
+NAME = GlobalBanksters_United_exe
 
-SRCS = megaphone.cpp
+SRCS = 	Account.cpp				\
+		tests.cpp
 
 CXX = c++
 
@@ -21,7 +22,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 #LIBS =
 
-ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ Megaphone SUCCESS\033[0m"
+ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ GlobalBanksters_United.exe build \033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)
