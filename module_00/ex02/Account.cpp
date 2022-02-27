@@ -25,6 +25,7 @@ Account::Account(int initial_deposit) : _amount(initial_deposit) {
 			   << "amount:" << Account::_amount << ";"
 	           << "created" << std::endl;
 	return ;
+
 }
 
 Account::~Account(void) {
@@ -34,6 +35,7 @@ Account::~Account(void) {
 	          << "amount:" << Account::_amount << ";"
 	          << "closed"  << std::endl;
 	return ;
+
 }
 
 // ************************************************************************** //
@@ -43,21 +45,25 @@ Account::~Account(void) {
 int	Account::getNbAccounts( void ) {
 
 	return (Account::_nbAccounts);
+
 }
 
 int	Account::getTotalAmount( void ) {
 
 	return (Account::_totalAmount);
+
 }
 
 int	Account::getNbDeposits( void ) {
 
 	return (Account::_totalNbDeposits);
+
 }
 
 int	Account::getNbWithdrawals( void ) {
 
 	return (Account::_totalNbWithdrawals);
+
 }
 
 void	Account::displayAccountsInfos( void ) {
@@ -68,6 +74,7 @@ void	Account::displayAccountsInfos( void ) {
 	          << "deposits:"    << Account::_totalNbDeposits    << ";"
 			  << "withdrawals:" << Account::_totalNbWithdrawals << std::endl;
 	return ;
+
 }
 
 void	Account::_displayTimestamp( void ) {
@@ -84,6 +91,7 @@ void	Account::_displayTimestamp( void ) {
 	std::cout << ltm->tm_sec;
 	std::cout << "] ";
 	return ;
+
 }
 
 // ************************************************************************** //
@@ -105,6 +113,7 @@ void	Account::makeDeposit( int deposit ) {
 			  << "amount:" 		<< this->_amount 			<< ";"
 			  << "nb_deposits:" << this->_nbDeposits 		<< std::endl;
 	return ;
+
 }
 
 bool	Account::makeWithdrawal( int withdrawal ) {
@@ -129,6 +138,7 @@ bool	Account::makeWithdrawal( int withdrawal ) {
 	          << "p_amount:"    		<< p_amount        			<< ";"
 	          << "withdrawal:refused"    << std::endl;
 	return 1;
+
 }
 
 int		Account::checkAmount( void ) const {
@@ -141,6 +151,7 @@ int		Account::checkAmount( void ) const {
 			  << std::endl;
 
 	return 0 ;
+
 }
 
 void	Account::displayStatus( void ) const {
@@ -152,6 +163,7 @@ void	Account::displayStatus( void ) const {
 			  << "withdrawals:" << Account::_nbWithdrawals 		<< std::endl;
 
 	return ;
+
 }
 
 // ************************************************************************** //

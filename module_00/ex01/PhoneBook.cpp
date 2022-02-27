@@ -1,20 +1,21 @@
 // ************************************************************************** //
 //                                                                            //
-//                	Phonebook.class.cpp for 42 School			          	  //
+//                	   PhoneBook.cpp for 42 School			          	      //
 //                Created on  : Thu Feb 24 13:45:02 2022                      //
 //                Last update : Thu Feb 24 13:45:02 2022                      //
 //                Made by : Theodore "tnave" Nave <tnave@student.42.fr>       //
 //                                                                            //
 // ************************************************************************** //
 
-#include "Phonebook.class.hpp"
+#include "PhoneBook.hpp"
 
-Phonebook::Phonebook( void ) {
+PhoneBook::PhoneBook( void ) {
 
 	return ;
+
 }
 
-int Phonebook::Search_contacts( void ) {
+int PhoneBook::Search_contacts( void ) {
 
 	int i;
 
@@ -25,9 +26,10 @@ int Phonebook::Search_contacts( void ) {
 		i++;
 	}
 	return 0;
+
 }
 
-int Phonebook::cpp_atoi(std::string str) {
+int PhoneBook::cpp_atoi(std::string str) {
 
 	long int	i;
 	long int	res;
@@ -52,9 +54,10 @@ int Phonebook::cpp_atoi(std::string str) {
 		i++;
 	}
 	return (sign * res);
+
 }
 
-int Phonebook::Look_for_contacts ( int i ) {
+int PhoneBook::Look_for_contacts ( int i ) {
 
 	std::string val;
 
@@ -70,9 +73,11 @@ int Phonebook::Look_for_contacts ( int i ) {
 			std::cout << "No contact found !" << std::endl;
 	}
 	return 0;
+
 }
 
-Phonebook::~Phonebook( void ) {
+PhoneBook::~PhoneBook( void ) {
 
 	return ;
+
 }

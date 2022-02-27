@@ -7,12 +7,12 @@
 //                                                                            //
 // ************************************************************************** //
 
-#include "Phonebook.class.hpp"
+#include "PhoneBook.hpp"
 #include <iostream>
 
 int main() {
 
-	Phonebook repertoire;
+	PhoneBook repertoire;
 	std::string cmd;
 	int i;
 	int index;
@@ -22,11 +22,11 @@ int main() {
 	std::cout << "⟅-------------------------------------------⟅" << std::endl;
 	std::cout << "|               PHONEBOOK-PRO               |" << std::endl;
 	std::cout << "⟅-------------------------------------------⟅" << std::endl;
-	std::cout << "|   Enter command [ADD] / [SEARCH] / [EXIT] |" << std::endl;
+	std::cout << "|  Enter command [ADD] / [SEARCH] / [EXIT]  |" << std::endl;
 	std::cout << "⟅-------------------------------------------⟅" << std::endl;
-	while(1)
+	while (1)
 	{
-		std::cout << "Entrez une commande : ";
+		std::cout << "Enter a command : ";
 		std::getline(std::cin, cmd);
 		if (cmd.compare("ADD") == 0)
 		{
@@ -51,8 +51,13 @@ int main() {
 			}
 		}
 		else if (cmd.compare("EXIT") == 0)
+		{
+			std::cout << "Goodbye !" << std::endl;
 			return 0;
+		}
 		else
 			std::cout << "Option not found" << std::endl;
 	}
+	return (0);
+
 }

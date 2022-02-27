@@ -10,12 +10,12 @@
 NAME = phonebook_pro
 
 SRCS = 	main.cpp				\
-		Contact.class.cpp 		\
-		Phonebook.class.cpp
+		Contact.cpp 			\
+		PhoneBook.cpp
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I ./include/
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I .
 
 HEADER = -I .
 
