@@ -7,16 +7,14 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME = Weapon
+NAME = karenFilter
 
-SRCS =  HumanA.cpp \
-		HumanB.cpp \
-		main.cpp   \
-		Weapon.cpp
+SRCS =  Karen.cpp \
+		main.cpp
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98 -I .
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I .
 
 HEADER = -I .
 
@@ -24,7 +22,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ Weapon SUCCESS\033[0m"
+# ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ karenFilter build SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
