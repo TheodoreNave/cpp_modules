@@ -41,7 +41,7 @@ void Karen::_error( void ) {
 void Karen::complain( std::string level) {
 
 	int i = 0;
-	const int tab[4]= {
+	const int tab[4] = {
 
 		level.compare("DEBUG"),
 		level.compare("INFO"),
