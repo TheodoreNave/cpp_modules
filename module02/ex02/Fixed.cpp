@@ -23,6 +23,7 @@ Fixed &Fixed::operator=( Fixed const &rhs ) {
 }
 
 
+
 int Fixed::getRawBits( void ) const {
 
 	return this->_rawBits;
@@ -71,3 +72,5 @@ Fixed::~Fixed( void ) {
 }
 
 int const Fixed::_stockBits = 8;
+
+
