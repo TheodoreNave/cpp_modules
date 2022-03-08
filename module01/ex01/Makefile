@@ -15,13 +15,13 @@ SRCS =  Zombie.cpp			\
 
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98 -I .
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -I .
 
 HEADER = -I .
 
 OBJ = $(SRCS:%.cpp=%.o)
 
-# LIBS =
+#LIBS =
 
 ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ ZombieHorde SUCCESS\033[0m"
 
