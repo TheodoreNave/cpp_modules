@@ -20,12 +20,13 @@ class HumanA {
 
 		HumanA( std::string name, Weapon &axe );
 		~HumanA( void );
+
 		void attack( void );
 
 	private:
+
 		Weapon &_type;
 		std::string _name;
-
 
 };
 

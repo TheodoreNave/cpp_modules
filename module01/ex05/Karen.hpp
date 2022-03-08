@@ -10,6 +10,7 @@ class Karen {
 
 		Karen( void );
 		~Karen( void );
+
 		void complain( std::string level );
 
 	private:
@@ -19,6 +20,7 @@ class Karen {
 		void _warning( void );
 		void _error( void );
 		void (Karen::*fct[4])(void);
+
 };
 
 #endif

@@ -12,7 +12,6 @@
 HumanB::HumanB( std::string str ) {
 
 	this->_name = str;
-
 	return ;
 }
 

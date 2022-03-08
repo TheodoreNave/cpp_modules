@@ -28,7 +28,7 @@ class Fixed {
 		Fixed  &operator--( void );				// Constructeur affectation
 		Fixed  operator++( int  );				// Constructeur affectation
 		Fixed  operator--( int );
-		
+
 		~Fixed( void );							// Default destructor
 		int getRawBits( void ) const;			// return value virgule fixe
 		void setRawBits( int const raw );		// init value virgule fixe
@@ -36,7 +36,7 @@ class Fixed {
 		int toInt( void ) const;
 		static Fixed &min( Fixed &a, Fixed &b );
 		static Fixed &max( Fixed &a, Fixed &b );
-	
+
 		static Fixed const &min( Fixed const &a, Fixed const &b );
 		static Fixed const &max( Fixed const &a, Fixed const &b );
 
@@ -53,4 +53,3 @@ std::ostream &operator<<( std::ostream &o, Fixed const &rhs );
 
 
 #endif
-

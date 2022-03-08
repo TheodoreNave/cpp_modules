@@ -20,10 +20,12 @@ class Weapon {
 
 		Weapon( std::string arme );
 		~Weapon( void );
+
 		const std::string &getType();
 		void setType(std::string str);
 
 	private:
+
 		std::string _type;
 };
 

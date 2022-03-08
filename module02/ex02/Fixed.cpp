@@ -52,15 +52,15 @@ bool Fixed::operator!=( Fixed const &rhs ) {
 Fixed Fixed::operator+( Fixed const &rhs ) {
 
 	Fixed res;
-	
+
 	res.setRawBits(this->_rawBits + rhs.getRawBits());
 	return (res);
 }
 
 Fixed Fixed::operator-( Fixed const &rhs ) {
-	
+
 	Fixed res;
-	
+
 	res.setRawBits(this->_rawBits - rhs.getRawBits());
 	return (res);
 }
@@ -68,7 +68,7 @@ Fixed Fixed::operator-( Fixed const &rhs ) {
 Fixed Fixed::operator*( Fixed const &rhs ) {
 
 	Fixed res;
-	
+
 	res.setRawBits(this->_rawBits * rhs.getRawBits() / (1 << _stockBits));
 	return (res);
 }
@@ -76,7 +76,7 @@ Fixed Fixed::operator*( Fixed const &rhs ) {
 Fixed Fixed::operator/( Fixed const &rhs ) {
 
 	Fixed res;
-	
+
 	res.setRawBits(this->_rawBits / rhs.getRawBits() * (1 << _stockBits));
 	return (res);
 }
@@ -88,7 +88,7 @@ Fixed &Fixed::operator++( void ) {
 }
 
 Fixed Fixed::operator++( int ) {
-	
+
 	Fixed res(*this);
 	this->_rawBits++;
 	return (res);
