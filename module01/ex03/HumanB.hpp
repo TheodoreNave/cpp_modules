@@ -29,7 +29,6 @@ class HumanB {
 		Weapon *_type;
 		std::string _name;
 
-
 };
 
 #endif

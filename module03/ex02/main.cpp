@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main() {
 
@@ -23,6 +24,11 @@ int main() {
 	scav.guardGate();
 	scavenger.attack("theo");
 
+	FragTrap frag = FragTrap("elliott");
+	FragTrap frage("elliott");
+	frag.attack("theo");
+	frage.attack("theo");
+	frage.highFivesGuys();
 
 
 	return (0);

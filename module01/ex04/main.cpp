@@ -48,21 +48,13 @@ int main (int ac, char **av)
 	std::ofstream outfile (file.c_str());
 	if (!outfile.is_open())
 		return (ft_error(2));
-
 	std::getline(filename, str, '\0');
-	// if (!std::getline(filename, str, '\0'))
-	// 	return(ft_error(4));
-
 	std::cout << str;
-	// std::cout << str.length() << std::endl;
 
 	while (1)
 	{
 		pos = str.find(s1, i);
 		i = pos + s2.length();
-		std::cout << "pos = "<< pos << std::endl;
-		std::cout << str.length() << std::endl;
-
 		if (pos == std::string::npos)
 			break;
 		str.erase(pos, s1.length());
@@ -70,6 +62,6 @@ int main (int ac, char **av)
 		std::cout << str;
 	}
 	outfile << str;
-	outfile.close();	// protect
+	outfile.close();
 	return (0);
 }

@@ -2,20 +2,20 @@
 
 ClapTrap::ClapTrap( void ) : _hit_points(10), _energy_points(10), _attack_damage(0) {
 
-	std::cout << "Constructor ClapTrap without name has been called" << std::endl;
+	std::cout << "Constructor ClapTrap 1 without name has been called" << std::endl;
 	return ;
 }
 
 ClapTrap::ClapTrap( std::string name ) : _name(name), _hit_points(10), _energy_points(10), _attack_damage(0) {
 
-	std::cout << "Constructor ClapTrap with name has been called" << std::endl;
+	std::cout << "Constructor ClapTrap 1 with name has been called" << std::endl;
 	return ;
 
 }
 
 ClapTrap::~ClapTrap( void ) {
 
-	std::cout << "Destructor ClapTrap has been called" << std::endl;
+	std::cout << "Destructor ClapTrap 1 has been called" << std::endl;
 	return ;
 }
 
