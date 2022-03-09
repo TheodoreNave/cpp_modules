@@ -3,7 +3,7 @@
 
 ScavTrap::ScavTrap( void ) {
 
-	std::cout << "Constructor ScavTrap without name has been called" << std::endl;
+	std::cout << "Constructor ScavTrap 2 without name has been called" << std::endl;
 	return ;
 }
 
@@ -11,7 +11,7 @@ ScavTrap::ScavTrap( std::string name ) {
 
 	this->set_name(name);
 	this->setValue();
-	std::cout << "Constructor ScavTrap with name has been called" << std::endl;
+	std::cout << "Constructor ScavTrap 2 with name has been called" << std::endl;
 	return ;
 
 }
@@ -25,7 +25,7 @@ void ScavTrap::setValue( void ) {
 
 ScavTrap::~ScavTrap( void ) {
 
-	std::cout << "Destructor ScavTrap has been called" << std::endl;
+	std::cout << "Destructor ScavTrap 2 has been called" << std::endl;
 	return ;
 }
 
