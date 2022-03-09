@@ -12,7 +12,9 @@ Karen::~Karen ( void ) {
 
 void Karen::complain( std::string level ) {
 
-	int i = 0;
+	int i;
+
+	i = 0;
 	const int tab[5] = {
 
 		level.compare("DEBUG"),

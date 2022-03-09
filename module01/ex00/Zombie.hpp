@@ -21,7 +21,7 @@ class Zombie {
 		~Zombie( void );
 
 		void announce( void );
-
+		void announce( int i);
 	private:
 
 		std::string _name;
@@ -31,6 +31,5 @@ class Zombie {
 Zombie* newZombie( std::string name );
 
 void randomChump( std:: string name );
-
 
 #endif

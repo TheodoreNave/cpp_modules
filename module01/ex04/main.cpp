@@ -49,7 +49,6 @@ int main (int ac, char **av)
 	if (!outfile.is_open())
 		return (ft_error(2));
 	std::getline(filename, str, '\0');
-	std::cout << str;
 
 	while (1)
 	{
@@ -59,7 +58,6 @@ int main (int ac, char **av)
 			break;
 		str.erase(pos, s1.length());
 		str.insert(pos, s2);
-		std::cout << str;
 	}
 	outfile << str;
 	outfile.close();

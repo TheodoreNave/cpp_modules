@@ -22,7 +22,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-# ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ karenFilter build SUCCESS\033[0m"
+ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ karenFilter build SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
