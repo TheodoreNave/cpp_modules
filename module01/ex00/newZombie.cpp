@@ -11,7 +11,7 @@
 
 Zombie* newZombie( std::string name ) {
 
-	Zombie *ptr = new Zombie(name);
-
+	Zombie *ptr = new Zombie();
+	ptr->give_name(name);
 	return (ptr);
 }

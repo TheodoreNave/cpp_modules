@@ -11,7 +11,8 @@
 
 void randomChump( std:: string name ) {
 
-	Zombie pile = Zombie(name);
+	Zombie pile = Zombie();
+	pile.give_name(name);
 	pile.announce();
 	return ;
 }

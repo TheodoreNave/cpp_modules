@@ -11,10 +11,13 @@
 
 int main( void ) {
 
-	Zombie zombie("George");
-	zombie.announce();
+	Zombie zombieGeorge;
+	Zombie *ptr;
 
-	Zombie *ptr = newZombie("Iggy");
+	zombieGeorge.give_name("George");
+	zombieGeorge.announce();
+
+	ptr = newZombie("Iggy");
 	ptr->announce();
 
 	randomChump("Frankenstein");

@@ -1,6 +1,6 @@
 // ************************************************************************** //
 //                                                                            //
-//                		HumanA.Hpp for 42 School			              	  //
+//                		main.cpp for 42 School			              	  	  //
 //                Created on  : Thu Feb 24 13:45:02 2022                      //
 //                Last update : Thu Feb 24 13:45:02 2022                      //
 //                Made by : Theodore "tnave" Nave <tnave@student.42.fr>       //
@@ -31,19 +31,18 @@ int main (int ac, char **av)
 	i = 0;
 	if (ac != 4)
 		return (ft_error(1));
+
 	std::ifstream filename(av[1]);
 	if (!filename.is_open())
 		return (ft_error(2));
 	std::string file = av[1];
 	file.append(".replace");
 
-
+	std::string str;
 	std::string s1 = av[2];
 	std::string s2 = av[3];
 	if (s1.length() == 0 || s2.length() == 0)
 		return (ft_error(3));
-
-	std::string str;
 
 	std::ofstream outfile (file.c_str());
 	if (!outfile.is_open())

@@ -1,23 +1,24 @@
+// ************************************************************************** //
+//                                                                            //
+//                		main.cpp for 42 School			              	  	  //
+//                Created on  : Thu Feb 24 13:45:02 2022                      //
+//                Last update : Thu Feb 24 13:45:02 2022                      //
+//                Made by : Theodore "tnave" Nave <tnave@student.42.fr>       //
+//                                                                            //
+// ************************************************************************** //
+
 #include "Karen.hpp"
 
 int main ()
 {
 	Karen karen;
-	std::cout << "Work" << std::endl;
 	karen.complain("DEBUG");
-	std::cout << "Not working" << std::endl;
 	karen.complain("debug");
-	std::cout << "Work" << std::endl;
 	karen.complain("INFO");
-	std::cout << "Not working" << std::endl;
 	karen.complain("iNfo");
-	std::cout << "Work" << std::endl;
 	karen.complain("WARNING");
-	std::cout << "Not working" << std::endl;
 	karen.complain("WaRnInG");
-	std::cout << "Work" << std::endl;
 	karen.complain("ERROR");
-	std::cout << "Not working" << std::endl;
 	karen.complain("ErROR");
 
 	return (0);
