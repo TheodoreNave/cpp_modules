@@ -3,15 +3,15 @@
 
 #include <iostream>
 #include <string>
-// #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
+// #include "ScavTrap.hpp"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 
 	public:
 
 		FragTrap( void );
-		FragTrap( std::string name );
+		FragTrap( std::string name ):ClapTrap(name) { };
 		FragTrap( FragTrap const &src );
 		FragTrap &operator=(FragTrap const &rhs);
 		~FragTrap( void );
@@ -19,7 +19,8 @@ class FragTrap : public ClapTrap {
 		void setValue( void );
 		void highFivesGuys(void);
 
-	private:
+
+	// private:
 
 };
 

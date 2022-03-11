@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-class DiamondTrap : public ClapTrap {
+class DiamondTrap : public FragTrap, public ScavTrap {
 
 	public:
 

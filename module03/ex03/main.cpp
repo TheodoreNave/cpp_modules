@@ -29,6 +29,8 @@ int main() {
 	frag.attack("theo");
 	frage.attack("theo");
 
+	// Diamond
+
 
 	return (0);
 }
