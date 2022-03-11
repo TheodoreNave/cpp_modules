@@ -17,12 +17,10 @@ class Point {
         ~Point ( void );
 		float signe (Point const p1, Point const p2, Point const p3);
 
-
-
     private:
 
-        float _x;
-        float _y;
+        Fixed const _x;
+        Fixed const _y;
 
 };
 
