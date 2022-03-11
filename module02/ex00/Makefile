@@ -7,9 +7,9 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME =	Fixed
+NAME = Fixed
 
-SRCS =  Fixed.cpp	\
+SRCS =  Fixed.cpp \
 		main.cpp
 
 CXX = c++
@@ -20,9 +20,9 @@ HEADER = -I .
 
 OBJ = $(SRCS:%.cpp=%.o)
 
-# LIBS =
+#LIBS =
 
-ADDED = echo "\033[92m ✨ ✨ ✨ Fixed SUCCESS\033[0m"
+ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ Fixed SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)

@@ -15,13 +15,14 @@ class Point {
         Point( Point const &src );
         // Point &operator=( Point const &rhs );
         ~Point ( void );
+		float signe (Point const p1, Point const p2, Point const p3);
 
 
 
     private:
 
-        Fixed const _x;
-        Fixed const _y;
+        float _x;
+        float _y;
 
 };
 

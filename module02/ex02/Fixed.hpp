@@ -9,30 +9,30 @@ class Fixed {
 
 	public:
 
-		Fixed( void );							// Default constructeur
+		Fixed( void );
 		Fixed(int const int_num);
 		Fixed(float const float_num);
-		Fixed( Fixed const &src );				// Constructeur copie
-		Fixed &operator=( Fixed const &rhs );	// Constructeur affectation
-		Fixed operator+( Fixed const &rhs );	// Constructeur affectation
-		Fixed operator-( Fixed const &rhs );	// Constructeur affectation
-		Fixed operator*( Fixed const &rhs );	// Constructeur affectation
-		Fixed operator/( Fixed const &rhs );	// Constructeur affectation
-		bool  operator>( Fixed const &rhs );	// Constructeur affectation
-		bool  operator<( Fixed const &rhs );	// Constructeur affectation
-		bool  operator>=( Fixed const &rhs );	// Constructeur affectation
-		bool  operator<=( Fixed const &rhs );	// Constructeur affectation
-		bool  operator==( Fixed const &rhs );	// Constructeur affectation
-		bool  operator!=( Fixed const &rhs );	// Constructeur affectation
-		Fixed  &operator++( void );				// Constructeur affectation
-		Fixed  &operator--( void );				// Constructeur affectation
-		Fixed  operator++( int  );				// Constructeur affectation
+		Fixed( Fixed const &src );
+		Fixed &operator=( Fixed const &rhs );
+		Fixed operator+( Fixed const &rhs );
+		Fixed operator-( Fixed const &rhs );
+		Fixed operator*( Fixed const &rhs );
+		Fixed operator/( Fixed const &rhs );
+		bool  operator>( Fixed const &rhs );
+		bool  operator<( Fixed const &rhs );
+		bool  operator>=( Fixed const &rhs );
+		bool  operator<=( Fixed const &rhs );
+		bool  operator==( Fixed const &rhs );
+		bool  operator!=( Fixed const &rhs );
+		Fixed  &operator++( void );
+		Fixed  &operator--( void );
+		Fixed  operator++( int  );
 		Fixed  operator--( int );
 
-		~Fixed( void );							// Default destructor
-		int getRawBits( void ) const;			// return value virgule fixe
-		void setRawBits( int const raw );		// init value virgule fixe
-		float toFloat( void ) const;			// convert fixe to float
+		~Fixed( void );
+		int getRawBits( void ) const;
+		void setRawBits( int const raw );
+		float toFloat( void ) const;
 		int toInt( void ) const;
 		static Fixed &min( Fixed &a, Fixed &b );
 		static Fixed &max( Fixed &a, Fixed &b );
@@ -42,10 +42,10 @@ class Fixed {
 
 
 
-	private:									// convert fixe to int
+	private:
 
 		int 			 _rawBits;
-		static int const _stockBits;		// assign litteral int 8
+		static int const _stockBits;
 
 };
 

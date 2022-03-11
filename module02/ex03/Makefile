@@ -7,12 +7,12 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME =	Fixed
+NAME = bsp
 
-SRCS =  Fixed.cpp	\
-		Point.cpp	\
-		Bsp.cpp		\
-		main.cpp
+SRCS =  Bsp.cpp		\
+		Fixed.cpp 	\
+		main.cpp	\
+		Point.cpp
 
 CXX = c++
 
@@ -22,9 +22,9 @@ HEADER = -I .
 
 OBJ = $(SRCS:%.cpp=%.o)
 
-# LIBS =
+#LIBS =
 
-ADDED = echo "\033[92m ✨ ✨ ✨ Fixed SUCCESS\033[0m"
+ADDED = echo "\033[92m⚙️ ⚙️ ⚙️ ⚙️ ⚙️ Zombie SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)

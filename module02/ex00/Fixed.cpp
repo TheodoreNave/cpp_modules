@@ -43,5 +43,3 @@ void Fixed::setRawBits( int const raw ) {
 	this->_rawBits = raw;
 	return ;
 }
-
-static int const _stockBits = 8;

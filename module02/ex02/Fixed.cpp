@@ -182,5 +182,3 @@ Fixed::~Fixed( void ) {
 }
 
 int const Fixed::_stockBits = 8;
-
-

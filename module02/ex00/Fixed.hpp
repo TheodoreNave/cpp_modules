@@ -7,22 +7,19 @@ class Fixed {
 
 	public:
 
-		Fixed( void );							// Default constructeur
-		Fixed( int assignNum );					// Con
-		Fixed( Fixed const &src );				// Constructeur copie
-		Fixed &operator=( Fixed const &rhs );	// Constructeur affectation
-		~Fixed( void );							// Default destructor
-		int getRawBits( void ) const;			// return value virgule fixe
-		void setRawBits( int const raw );		// init value virgule fixe
-
+		Fixed( void );
+		Fixed( int assignNum );
+		Fixed( Fixed const &src );
+		Fixed &operator=( Fixed const &rhs );
+		~Fixed( void );
+		int getRawBits( void ) const;
+		void setRawBits( int const raw );
 
 	private:
 
 		int 			 _rawBits;
-		static int const _stockBits;		// assign litteral int 8
+		static int const _stockBits;
 
 };
-
-
 
 #endif
