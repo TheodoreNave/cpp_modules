@@ -9,7 +9,10 @@
 
 NAME = FragTrap
 
-SRCS =  main.cpp
+SRCS =  main.cpp 	 \
+		ClapTrap.cpp \
+		FragTrap.cpp \
+		ScavTrap.cpp
 
 CXX = c++
 
@@ -21,10 +24,10 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m ⚙️ ⚙️ ⚙️ ⚙️ ⚙️ no_sed build SUCCESS\033[0m"
+ADDED = echo "\033[92m ✨ ✨ ✨ FragTrap SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)  && $(ADDED)
 
 MAKEFLAGS += --silent
 

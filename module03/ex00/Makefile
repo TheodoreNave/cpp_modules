@@ -21,7 +21,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m ⚙️ ⚙️ ⚙️ ⚙️ ⚙️ no_sed build SUCCESS\033[0m"
+ADDED = echo "\033[92m ✨ ✨ ✨ ClapTrap SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)

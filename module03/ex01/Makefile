@@ -9,7 +9,9 @@
 
 NAME = ScavTrap
 
-SRCS =  main.cpp
+SRCS =  main.cpp  	 \
+		ClapTrap.cpp \
+		ScavTrap.cpp
 
 CXX = c++
 
@@ -21,7 +23,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m ⚙️ ⚙️ ⚙️ ⚙️ ⚙️ no_sed build SUCCESS\033[0m"
+ADDED = echo "\033[92m ✨ ✨ ✨ ScavTrap SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)

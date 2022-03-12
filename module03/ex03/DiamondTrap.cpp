@@ -50,7 +50,7 @@ DiamondTrap &DiamondTrap::operator=( DiamondTrap const &rhs ) {
 	return *this;
 }
 
-void ScavTrap::attack(const std::string &target) {
+void DiamondTrap::attack(const std::string &target) {
 
 	if (this->_energy_points)
 	{

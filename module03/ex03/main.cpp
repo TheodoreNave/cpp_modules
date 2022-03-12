@@ -1,6 +1,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main() {
 
@@ -29,7 +30,11 @@ int main() {
 	frag.attack("theo");
 	frage.attack("theo");
 
-	// Diamond
+	DiamondTrap diamond("Jul");
+
+	diamond.attack("theo");
+	diamond.whoAmI();
+	diamond.beRepaired(4);
 
 
 	return (0);
