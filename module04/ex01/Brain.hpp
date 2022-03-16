@@ -13,12 +13,16 @@ class Brain {
 		Brain(Brain const &src);
 		~Brain(void);
 
+		void setIdeas( std::string idea );
+		void printId( void );
+
 		Brain &operator=(Brain const &rhs);
-		
+
 
 	protected:
 
-		std::string ideas[100];
+		std::string _ideas[100];
+
 	private:
 
 

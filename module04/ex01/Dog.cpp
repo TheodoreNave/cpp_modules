@@ -24,8 +24,14 @@ Dog::~Dog(void) {
 	return ;
 }
 
+void Dog::printIdeas( void ) {
+
+	cerv->printId();
+ 	return ;
+}
+
 Dog &Dog::operator=(Dog const &rhs) {
-	
+
 	this->type = rhs.type;
 	return (*this);
 }
@@ -34,4 +40,9 @@ void Dog::makeSound(void) const{
 
 	std::cout << "WAF WAF..!" << std::endl;
 	return ;
+}
+
+void Dog::setIdeas( std::string idea ) {
+
+	this->cerv->setIdeas(idea);
 }

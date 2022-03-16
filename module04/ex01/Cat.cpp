@@ -18,14 +18,14 @@ Cat::Cat(Cat const &src) {
 }
 
 Cat::~Cat(void) {
-	
+
 	delete this->cerv;
 	std::cout << "Destructor Cat Default call" << std::endl;
 	return ;
 }
 
 Cat &Cat::operator=(Cat const &rhs) {
-	
+
 	this->type = rhs.type;
 	return (*this);
 }

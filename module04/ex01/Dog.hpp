@@ -12,10 +12,13 @@ class Dog : public Animal {
 
 		Dog(void);
 		Dog(Dog const &src);
-		virtual ~Dog(void);
+		~Dog(void);
 
 		Dog &operator=(Dog const &rhs);
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
+		void setIdeas( std::string idea );
+		void printIdeas( void );
+
 
 	protected:
 

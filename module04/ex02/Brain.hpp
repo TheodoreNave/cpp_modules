@@ -14,7 +14,6 @@ class Brain {
 		~Brain(void);
 
 		Brain &operator=(Brain const &rhs);
-		
 
 	protected:
 

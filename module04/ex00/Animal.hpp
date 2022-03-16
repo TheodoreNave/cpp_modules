@@ -10,7 +10,7 @@ class Animal {
 
 		Animal(void);
 		Animal(Animal const &src);
-		~Animal(void);
+		virtual ~Animal(void);
 
 		Animal &operator=(Animal const &rhs);
 		virtual void makeSound(void) const;
@@ -18,7 +18,7 @@ class Animal {
 
 	protected:
 
-		std::string type;
+		std::string 	type;
 
 	private:
 

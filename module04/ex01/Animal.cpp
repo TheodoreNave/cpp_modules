@@ -20,9 +20,14 @@ Animal::~Animal(void) {
 }
 
 Animal &Animal::operator=(Animal const &rhs) {
-	
+
 	this->type = rhs.type;
 	return (*this);
+}
+
+void Animal::printIdeas( void ) {
+
+	return ;
 }
 
 
@@ -35,4 +40,10 @@ void Animal::makeSound(void) const {
 std::string const Animal::getType(void) const {
 
 	return (this->type);
+}
+
+void Animal::setIdeas( std::string idea ) {
+
+	std::cout << idea << std::endl;
+	return ;
 }

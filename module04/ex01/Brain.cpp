@@ -19,7 +19,31 @@ Brain::~Brain(void) {
 	return ;
 }
 
+void Brain::printId( void ) {
+
+	int i;
+	i = 0;
+	while (i < 5)
+	{
+		std::cout << this->_ideas[i] << std::endl;
+		i++;
+	}
+}
+
+void Brain::setIdeas( std::string idea ) {
+
+	int i;
+	i = 0;
+	while (i < 100)
+	{
+		this->_ideas[i] = idea;
+		i++;
+	}
+}
+
+
 Brain &Brain::operator=(Brain const &rhs) {
+
 	(void)rhs;
 	return (*this);
 }

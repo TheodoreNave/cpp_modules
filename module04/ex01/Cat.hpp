@@ -12,10 +12,10 @@ class Cat : public Animal {
 
 		Cat(void);
 		Cat(Cat const &src);
-		virtual ~Cat(void);
+		~Cat(void);
 
 		Cat &operator=(Cat const &rhs);
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 
 	protected:
 

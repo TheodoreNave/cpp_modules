@@ -20,7 +20,7 @@ AAnimal::~AAnimal(void) {
 }
 
 AAnimal &AAnimal::operator=(AAnimal const &rhs) {
-	
+
 	this->type = rhs.type;
 	return (*this);
 }

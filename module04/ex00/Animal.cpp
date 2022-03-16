@@ -20,11 +20,10 @@ Animal::~Animal(void) {
 }
 
 Animal &Animal::operator=(Animal const &rhs) {
-	
+
 	this->type = rhs.type;
 	return (*this);
 }
-
 
 void Animal::makeSound(void) const {
 

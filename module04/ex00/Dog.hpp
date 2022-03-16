@@ -14,7 +14,7 @@ class Dog : public Animal {
 		~Dog(void);
 
 		Dog &operator=(Dog const &rhs);
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 
 	protected:
 
