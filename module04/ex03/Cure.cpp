@@ -1,8 +1,9 @@
 #include "Cure.hpp"
 #include "Character.hpp"
 
-Cure::Cure(void) : type("Cure") {
+Cure::Cure(void) {
 
+	AMateria::type = "cure";
 	std::cout << "Constructor Cure Default call" << std::endl;
 	return ;
 }
@@ -14,9 +15,9 @@ Cure::Cure(Cure const &src) {
 	return ;
 }
 
+Cure::Cure(std::string const & type) {
 
-Cure::Cure(std::string const & type) : type(type) {
-
+	AMateria::type = type;
 	std::cout << "Constructor Cure copy with strings call" << std::endl;
 	return ;
 }
@@ -29,23 +30,12 @@ Cure::~Cure(void) {
 
 Cure &Cure::operator=(Cure const &rhs) {
 
-	this->type = rhs.type;
-
+	AMateria::type = rhs.type;
 	return (*this);
 }
 
 Cure *Cure::clone() const {
 
 	Cure *clone = new Cure();
-
 	return (clone);
-}
-
-void Cure::use(ICharacter& target) {
-
-	if (target)
-		std::cout <<  "* heals " << target << "’s wounds *";
-	else
-		std::cout << "No target specified" << std::endl;
-	return ;
 }

@@ -10,14 +10,15 @@ class Character : public ICharacter {
 
 	protected:
 
-		std::string name; // ICharacter
+		std::string _name;
 		AMateria* item[4];
 
 	public:
 
 		Character(void);
 		Character(Character const &src);
-		~Character(void);
+		Character(std::string name);
+		virtual ~Character(void);
 
 		Character &operator=(Character const &rhs);
 

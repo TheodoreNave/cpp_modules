@@ -1,8 +1,17 @@
 #include "MateriaSource.hpp"
+#include "AMateria.hpp"
 
-MateriaSource::MateriaSource(void) {
+// ************************************************************************** //
+//                               Constructor                             	  //
+// ************************************************************************** //
+
+MateriaSource::MateriaSource(void)  {
 
 	std::cout << "Constructor MateriaSource Default call" << std::endl;
+	for (int i = 0 ; i < 4 ; i++)
+	{
+		this->materia[i] = NULL;
+	}
 	return ;
 }
 
@@ -13,49 +22,86 @@ MateriaSource::MateriaSource(MateriaSource const &src) {
 	return ;
 }
 
-
-MateriaSource::MateriaSource(std::string const & type) {
-
-	std::cout << "Constructor MateriaSource copy with strings call" << std::endl;
-	return ;
-}
-
 MateriaSource::~MateriaSource(void) {
 
+	// delete [] this->materia;
 	std::cout << "Destructor MateriaSource Default call" << std::endl;
 	return ;
 }
 
+// ************************************************************************** //
+//                               Assignement operator                      	  //
+// ************************************************************************** //
+
 MateriaSource &MateriaSource::operator=(MateriaSource const &rhs) {
 
-	this-> = rhs.;
+	int i;
 
+	i = 0;
+	while (i < 4)
+	{
+		this->materia[i] = rhs.materia[i];
+		i++;
+	}
 	return (*this);
 }
 
-MateriaSource *MateriaSource::clone() const {
+// ************************************************************************** //
+//                               Member functions                             //
+// ************************************************************************** //
 
-	MateriaSource *clone = new MateriaSource();
+bool MateriaSource::checkType(std::string type) {
 
-	return (clone);
+	if (type.compare("ice")) {
+		return (true);
+	}
+	else if (type.compare("cure"))
+		return (true);
+	// else if (type.compare("fire"))
+		// return (true);
+	// else if (type.compare("wind"))
+		// return (true);
+	else
+	{
+		std::cout << "This type does not exist" << std::endl;
+		return (false);
+	}
 }
 
-void MateriaSource::use(ICharacter& target) {
 
-	std::cout << "* shoots an ice bolt at <target> *";
-	return ;
-}
+void MateriaSource::learnMateria(AMateria* type) {
 
+	int i;
 
-void MateriaSource::learnMateria(Amateria*) {
-
-	this->type = new Amateria(type);
+	i = 0;
+	if (!checkType(type->getType()))
+		return ;
+	while (i < 4)
+	{
+		if (!this->materia[i])
+		{
+			this->materia[i] = type;
+			return ;
+		}
+		i++;
+	}
 }
 
 AMateria* MateriaSource::createMateria(std::string const & type) {
 
-	Amateria *tmp = type;
+	int i;
 
-	return tmp;
-
+	i = 0;
+	while (i < 4 && this->materia[i])
+	{
+		if (this->materia[i]->getType() == type)
+		{
+			return (this->materia[i]);
+		}
+		else
+			this->materia[i] = NULL;
+		i++;
+	}
+	std::cout << "No materia found" << std::endl;
+	return NULL;
 }

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "Amateria.hpp"
+#include "AMateria.hpp"
 
 class IMateriaSource {
 

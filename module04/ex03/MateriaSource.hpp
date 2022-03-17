@@ -3,10 +3,12 @@
 
 #include <iostream>
 #include <string>
-#include "AMateria.hpp"
 #include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource {
+
+	protected:
+		AMateria* materia[4];
 
 	public:
 
@@ -16,6 +18,8 @@ class MateriaSource : public IMateriaSource {
 
 		MateriaSource &operator=(MateriaSource const &rhs);
 
+		bool checkType(std::string type);
+		AMateria* searchMateria(std::string const &type);
 		void learnMateria(AMateria*);
 		AMateria* createMateria(std::string const & type);
 

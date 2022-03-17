@@ -3,12 +3,10 @@
 
 #include <iostream>
 #include <string>
+#include "AMateria.hpp"
+#include "Character.hpp"
 
-class Ice {
-
-	protected:
-
-		std::string type; // ice
+class Ice : public AMateria {
 
 	public:
 
@@ -19,12 +17,7 @@ class Ice {
 
 		Ice &operator=(Ice const &rhs);
 
-		std::string const & getType() const; //Returns the Materia type
-
 		virtual Ice* clone() const;
-		void use(ICharacter& target);
-
-
 
 };
 

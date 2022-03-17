@@ -5,11 +5,12 @@
 #include <string>
 #include "AMateria.hpp"
 
+class AMateria;
 class ICharacter {
 
 	protected:
 
-		std::string type; // ICharacter
+		std::string type;
 
 	public:
 

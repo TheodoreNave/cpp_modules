@@ -1,7 +1,6 @@
 
 #include "Ice.hpp"
 #include "Cure.hpp"
-#include "AMateria.hpp"
 #include "ICharacter.hpp"
 #include "Character.hpp"
 #include "IMateriaSource.hpp"
@@ -18,11 +17,10 @@ int main()
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
-	tmp = src->createMateria("cure");
+	tmp = src->createMateria("cqre");
 	me->equip(tmp);
 
 	ICharacter* bob = new Character("bob");
-	ICharacter* ronald = new Character("ronald");
 	me->use(0, *bob);
 	me->use(1, *bob);
 	delete bob;
