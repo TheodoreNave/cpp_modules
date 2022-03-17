@@ -1,4 +1,5 @@
 #include "Cure.hpp"
+#include "Character.hpp"
 
 Cure::Cure(void) : type("Cure") {
 
@@ -42,6 +43,9 @@ Cure *Cure::clone() const {
 
 void Cure::use(ICharacter& target) {
 
-	std::cout <<  "* heals <target>’s wounds *";
+	if (target)
+		std::cout <<  "* heals " << target << "’s wounds *";
+	else
+		std::cout << "No target specified" << std::endl;
 	return ;
 }

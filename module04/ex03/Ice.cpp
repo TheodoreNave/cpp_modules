@@ -1,4 +1,5 @@
 #include "Ice.hpp"
+#include "Character.hpp"
 
 Ice::Ice(void) : type("ice") {
 
@@ -42,6 +43,9 @@ Ice *Ice::clone() const {
 
 void Ice::use(ICharacter& target) {
 
-	std::cout << "* shoots an ice bolt at <target> *";
+	if (target)
+		std::cout << "* shoots an ice bolt at " << target << " *";
+	else
+		std::cout << "No target specified" << std::endl;
 	return ;
 }
