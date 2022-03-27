@@ -40,12 +40,13 @@ bool Form::getFormSigned() const {
 	return (this->_form_signed);
 }
 
-int Form::getGradeSign() const {
+int const Form::getGradeSign() const {
 
 	return (this->_grade_sign);
 }
 
-int Form::getGradeExec() const {
+
+int const Form::getGradeExec() const {
 
 	return (this->_grade_exec);
 }
@@ -60,16 +61,44 @@ Form &Form::operator=(Form const &rhs) {
 
 void Form::beSigned(Bureaucrat const &office) {
 
-	if (office.getGrade() > getGradeSign())
-		throw Form::GradeTooLowException ();
-	else
+	if (office.getGrade() < getGradeSign())
 		this->_form_signed = true;
+	else
+	{
+		throw Form::GradeTooLowException ();
+		this->_form_signed = false;
+	}
+	return ;
+}
+
+void Form::signForm(Bureaucrat const &office) {
+
+	if (this->_form_signed == true)
+		std::cout << office.getName() << " signed " << this->getFormName() << std::endl;
+	else if (this->_form_signed == false)
+	{
+		std::cout << office.getName() << " couldn’t sign " << this->getFormName() << " because ";
+		if (office.getGrade() < getGradeSign())
+		{
+			std::cout << "Grade too high" << std::endl;
+			std::cout << "." << std::endl;
+		}
+		else if (office.getGrade() > getGradeSign())
+		{
+			std::cout << "Grade too low" << std::endl;
+			std::cout << "." << std::endl;
+		}
+	}
 	return ;
 }
 
 std::ostream &operator<<(std::ostream &o, Form const &rhs) {
 
-	o << rhs.getFormName() << " grade to sign : " << rhs.getGradeSign() << ", and need the grade to execute : " << rhs.getGradeExec();
+	o << rhs.getFormName() << rhs.getGradeSign() << rhs.getGradeExec();
+	if (rhs.getFormSigned())
+		o << "yes";
+	else
+		o << "no";
 	return o;
 }
 

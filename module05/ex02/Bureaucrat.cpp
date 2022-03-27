@@ -47,7 +47,6 @@ std::string Bureaucrat::getName( void ) const {
 int Bureaucrat::getGrade( void ) const {
 
 	return this->_grade;
-
 }
 
 void Bureaucrat::increm( void ) {
@@ -60,7 +59,6 @@ void Bureaucrat::increm( void ) {
 	return ;
 }
 
-
 void Bureaucrat::decrem( void ) {
 
 	this->_grade--;
@@ -68,18 +66,6 @@ void Bureaucrat::decrem( void ) {
 		throw Bureaucrat::GradeTooHighException ();
 	if (this->_grade > 150)
 		throw Bureaucrat::GradeTooLowException ();
-	return ;
-}
-
-void Bureaucrat::signForm(Form &form) {
-
-	if (form.getFormSigned())
-		std::cout << this->getName() << " signed " << form.getFormName() << std::endl;
-	else
-	{
-		std::cout << this->getName() << " couldn’t sign " << form.getFormName() << " because ";
-		std::cout << "Grade too low." << std::endl;
-	}
 	return ;
 }
 

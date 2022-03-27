@@ -6,30 +6,16 @@
 #include <stdexcept>
 #include "Bureaucrat.hpp"
 
-class Bureaucrat;
 
 class Form {
 
 	private:
 
-		const std::string  	_name;
+		std::string const 	_name;
 		bool 				_form_signed;
-		const int 			_grade_sign;
-		const int 			_grade_exec;
+		int const 			_grade_sign;
+		int const 			_grade_exec;
 
-	class GradeTooHighException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
-
-	class GradeTooLowException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
 
 	public:
 
@@ -45,11 +31,25 @@ class Form {
 		void increm( void );
 		void decrem( void );
 		void beSigned(Bureaucrat const &office);
+		void signForm(Bureaucrat const &office);
 		std::string getFormName() const;
 		bool getFormSigned() const;
-		int getGradeSign() const;
-		int getGradeExec() const;
+		int const getGradeSign() const;
+		int const getGradeExec() const;
 
+		class GradeTooHighException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
+
+		class GradeTooLowException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
 
 };
 

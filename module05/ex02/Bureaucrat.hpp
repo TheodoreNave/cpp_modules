@@ -4,9 +4,7 @@
 #include <string>
 #include <iostream>
 #include <stdexcept>
-#include "Form.hpp"
 
-class Form;
 
 class Bureaucrat {
 
@@ -15,19 +13,19 @@ class Bureaucrat {
 		std::string _name;
 		int 		_grade;
 
-	class GradeTooHighException  : public std::exception {
+		class GradeTooHighException  : public std::exception {
 
-		public:
+			public:
 
-			virtual const char* what() const throw();
-	};
+				virtual const char* what() const throw();
+		};
 
-	class GradeTooLowException  : public std::exception {
+		class GradeTooLowException  : public std::exception {
 
-		public:
+			public:
 
-			virtual const char* what() const throw();
-	};
+				virtual const char* what() const throw();
+		};
 
 	public:
 
@@ -40,7 +38,6 @@ class Bureaucrat {
 
 		std::string getName( void ) const ;
 		int getGrade( void ) const ;
-		void signForm(Form &form);
 		void increm( void );
 		void decrem( void );
 
