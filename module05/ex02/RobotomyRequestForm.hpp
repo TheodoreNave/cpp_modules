@@ -32,7 +32,7 @@ class RobotomyRequestForm {
 
 		RobotomyRequestForm &operator=(RobotomyRequestForm const &rhs);
 
-
+		void RobotomyRequestForm::setRobot();
 };
 
 std::ostream &operator<<(std::ostream &o, RobotomyRequestForm const &rhs);

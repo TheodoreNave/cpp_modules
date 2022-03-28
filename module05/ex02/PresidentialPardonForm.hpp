@@ -30,7 +30,7 @@ class PresidentialPardonForm {
 		~PresidentialPardonForm( void );
 
 		PresidentialPardonForm &operator=(PresidentialPardonForm const &rhs);
-
+		void PresidentialPardonForm::setPardon();
 
 };
 

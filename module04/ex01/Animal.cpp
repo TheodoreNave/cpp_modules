@@ -25,7 +25,7 @@ Animal &Animal::operator=(Animal const &rhs) {
 	return (*this);
 }
 
-void Animal::printIdeas( void ) {
+void Animal::printIdeas( void ) const {
 
 	return ;
 }

@@ -17,12 +17,9 @@ class Cat : public AAnimal {
 		Cat &operator=(Cat const &rhs);
 		virtual void makeSound(void) const;
 
-	protected:
-
 	private:
 
 		Brain *cerv;
-
 };
 
 #endif

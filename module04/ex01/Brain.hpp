@@ -14,7 +14,7 @@ class Brain {
 		~Brain(void);
 
 		void setIdeas( std::string idea );
-		void printId( void );
+		void printId( void ) const;
 
 		Brain &operator=(Brain const &rhs);
 

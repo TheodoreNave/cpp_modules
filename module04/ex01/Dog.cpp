@@ -24,7 +24,7 @@ Dog::~Dog(void) {
 	return ;
 }
 
-void Dog::printIdeas( void ) {
+void Dog::printIdeas( void ) const {
 
 	cerv->printId();
  	return ;

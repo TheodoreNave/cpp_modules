@@ -25,7 +25,6 @@ WrongAnimal &WrongAnimal::operator=(WrongAnimal const &rhs) {
 	return (*this);
 }
 
-
 void WrongAnimal::makeSound(void) const {
 
 	std::cout << "ZZZzzzzz..!" << std::endl;

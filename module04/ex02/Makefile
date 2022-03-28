@@ -10,11 +10,10 @@
 NAME = Farmville
 
 SRCS =  main.cpp  	 	\
-		Animal.cpp 		\
+		AAnimal.cpp 	\
 		Cat.cpp			\
 		Dog.cpp			\
-		WrongAnimal.cpp	\
-		WrongCat.cpp
+		Brain.cpp
 
 CXX = c++
 
@@ -26,10 +25,10 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m ✨ ✨ ✨ ScavTrap SUCCESS\033[0m"
+ADDED = echo "\033[92m 👨‍🌾 👨‍🌾 👨‍🌾 Farmville SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)
 
 MAKEFLAGS += --silent
 

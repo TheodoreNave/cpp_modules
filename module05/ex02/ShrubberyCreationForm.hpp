@@ -9,6 +9,10 @@
 
 class ShrubberyCreationForm : public AForm {
 
+	private:
+
+		ShrubberyCreationForm( void );
+
 	class GradeTooHighException  : public std::exception {
 
 		public:
@@ -25,14 +29,13 @@ class ShrubberyCreationForm : public AForm {
 
 	public:
 
-		ShrubberyCreationForm( void );
 		ShrubberyCreationForm( std::string name);
 		ShrubberyCreationForm( ShrubberyCreationForm const &src );
 		~ShrubberyCreationForm( void );
 
 		ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
 
-
+		void setTree();
 };
 
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &rhs);

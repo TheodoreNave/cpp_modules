@@ -19,7 +19,7 @@ Brain::~Brain(void) {
 	return ;
 }
 
-void Brain::printId( void ) {
+void Brain::printId( void ) const {
 
 	int i;
 	i = 0;
@@ -40,7 +40,6 @@ void Brain::setIdeas( std::string idea ) {
 		i++;
 	}
 }
-
 
 Brain &Brain::operator=(Brain const &rhs) {
 

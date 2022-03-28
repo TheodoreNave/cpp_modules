@@ -21,9 +21,6 @@ class WrongCat : public WrongAnimal {
 
 		std::string type;
 
-	private:
-
-
 };
 
 #endif

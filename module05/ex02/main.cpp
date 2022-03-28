@@ -9,6 +9,8 @@ int main () {
 	Bureaucrat tim("tim", 11);
 	Form paper2("paper_two", 150, 150);
 	Form paper3("paper_three", 40, 40);
+	ShruberryCreationForm shrub;
+
 
 	try
 	{
@@ -16,6 +18,7 @@ int main () {
 		Form paper("paper", 11, 11);
 		paper.beSigned(theo);
 		theo.signForm(paper);
+		shrub.execute(theo);
 		// Bureaucrat theo = Bureaucrat("theo", 20);
 
 	}

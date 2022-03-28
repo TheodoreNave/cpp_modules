@@ -16,10 +16,6 @@ class Dog : public Animal {
 		Dog &operator=(Dog const &rhs);
 		void makeSound(void) const;
 
-	protected:
-
-	private:
-
 
 };
 

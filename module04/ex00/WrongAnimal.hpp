@@ -20,8 +20,6 @@ class WrongAnimal {
 
 		std::string type;
 
-	private:
-
 
 };
 

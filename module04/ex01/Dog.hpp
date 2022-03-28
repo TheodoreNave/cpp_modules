@@ -17,10 +17,7 @@ class Dog : public Animal {
 		Dog &operator=(Dog const &rhs);
 		void makeSound(void) const;
 		void setIdeas( std::string idea );
-		void printIdeas( void );
-
-
-	protected:
+		void printIdeas( void ) const;
 
 	private:
 

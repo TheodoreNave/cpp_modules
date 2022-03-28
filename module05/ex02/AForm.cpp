@@ -24,7 +24,6 @@ AForm::AForm( AForm const &src ) : _name(src.getFormName()), _form_signed(src.ge
 	return ;
 }
 
-
 AForm::~AForm( void ) {
 
 	std::cout << "AForm destructor called" << std::endl;
@@ -33,6 +32,12 @@ AForm::~AForm( void ) {
 std::string AForm::getFormName() const {
 
 	return (this->_name);
+}
+
+void AForm::setTarget( std::string target ) {
+
+	this->_target = target;
+	return ;
 }
 
 bool AForm::getFormSigned() const {
@@ -56,7 +61,6 @@ AForm &AForm::operator=(AForm const &rhs) {
 
 	return (*this);
 }
-
 
 void AForm::beSigned(Bureaucrat const &office) {
 

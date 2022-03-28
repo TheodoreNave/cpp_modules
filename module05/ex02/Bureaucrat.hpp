@@ -43,6 +43,7 @@ class Bureaucrat {
 		void signForm(AForm &form);
 		void increm( void );
 		void decrem( void );
+		void executeForm( AForm const & form );
 
 
 };

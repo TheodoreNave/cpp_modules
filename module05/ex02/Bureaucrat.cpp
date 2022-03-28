@@ -71,7 +71,7 @@ void Bureaucrat::decrem( void ) {
 	return ;
 }
 
-void Bureaucrat::signForm(Form &form) {
+void Bureaucrat::signForm(AForm &form) {
 
 	if (form.getFormSigned())
 		std::cout << this->getName() << " signed " << form.getFormName() << std::endl;
@@ -80,6 +80,15 @@ void Bureaucrat::signForm(Form &form) {
 		std::cout << this->getName() << " couldn’t sign " << form.getFormName() << " because ";
 		std::cout << "Grade too low." << std::endl;
 	}
+	return ;
+}
+
+void Bureaucrat::executeForm( AForm const & form ) {
+
+	if (form.execute(*this))
+		std::cout << this->getName() << " executed " << form.getFormName() << std::endl;
+	else
+		std::cout << this->getName() << " failed to execute " << form.getFormName() << std::endl;
 	return ;
 }
 

@@ -4,7 +4,7 @@ Dog::Dog(void) {
 
 	this->cerv = new Brain();
 
-	Animal::type = "Dog";
+	AAnimal::type = "Dog";
 
 	std::cout << "Constructor Dog Default call" << std::endl;
 	return ;

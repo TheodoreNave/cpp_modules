@@ -20,8 +20,6 @@ class Animal {
 
 		std::string 	type;
 
-	private:
-
 
 };
 

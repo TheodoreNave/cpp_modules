@@ -7,7 +7,7 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME = Farmville
+NAME = Amateria
 
 SRCS =  main.cpp  	 	\
 		AMateria.cpp 	\
@@ -26,10 +26,10 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m ✨ ✨ ✨ ScavTrap SUCCESS\033[0m"
+ADDED = echo "\033[92m 🧙‍♂️ 🧙‍♂️ 🧙‍♂️ FFXVII SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)
 
 MAKEFLAGS += --silent
 
