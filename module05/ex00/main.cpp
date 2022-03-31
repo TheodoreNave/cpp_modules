@@ -2,8 +2,6 @@
 #include <iostream>
 #include <unistd.h>
 
-// Understand correclty the thing with Declaration outside the try catch
-
 int main () {
 
 	Bureaucrat greg;
