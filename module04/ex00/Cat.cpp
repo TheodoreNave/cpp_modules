@@ -2,6 +2,8 @@
 
 Cat::Cat(void) {
 
+	Animal::type = "Cat";
+
 	std::cout << "Constructor Cat Default call" << std::endl;
 	return ;
 }
