@@ -72,6 +72,7 @@
 		"mutex": "cpp",
 		"ratio": "cpp",
 		"stack": "cpp",
-		"__bits": "cpp"
+		"__bits": "cpp",
+		"filesystem": "cpp"
 	}
 }

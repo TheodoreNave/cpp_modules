@@ -10,8 +10,23 @@ class Bureaucrat {
 
 	private:
 
-		std::string _name;
-		int 		_grade;
+		std::string const	_name;
+		int 				_grade;
+
+	public:
+
+		Bureaucrat( void );
+		Bureaucrat( std::string name, int grade );
+		Bureaucrat( Bureaucrat const &src );
+		~Bureaucrat( void );
+
+		Bureaucrat &operator=(Bureaucrat const &rhs);
+
+		std::string getName( void ) const ;
+		int getGrade( void ) const ;
+		void checkGrade( void );
+		void increm( void );
+		void decrem( void );
 
 		class GradeTooHighException  : public std::exception {
 
@@ -26,20 +41,6 @@ class Bureaucrat {
 
 				virtual const char* what() const throw();
 		};
-
-	public:
-
-		Bureaucrat( void );
-		Bureaucrat( std::string name, int grade );
-		Bureaucrat( Bureaucrat const &src );
-		~Bureaucrat( void );
-
-		Bureaucrat &operator=(Bureaucrat const &rhs);
-
-		std::string getName( void ) const ;
-		int getGrade( void ) const ;
-		void increm( void );
-		void decrem( void );
 
 
 };
