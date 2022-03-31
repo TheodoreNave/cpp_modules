@@ -1,5 +1,9 @@
 #include "Brain.hpp"
 
+// ************************************************************************** //
+//                      	Constructor / Destructor              	 	 	  //
+// ************************************************************************** //
+
 Brain::Brain(void) {
 
 	std::cout << "Constructor Brain Default call" << std::endl;
@@ -18,6 +22,11 @@ Brain::~Brain(void) {
 	std::cout << "Destructor Brain Default call" << std::endl;
 	return ;
 }
+
+// ************************************************************************** //
+//                      	  Assignement Operator       	      	 	 	  //
+// ************************************************************************** //
+
 
 Brain &Brain::operator=(Brain const &rhs) {
 	(void)rhs;

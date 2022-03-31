@@ -10,6 +10,9 @@ int main()
 		// const AAnimal wolf("theo");
 		const AAnimal* j = new Dog();
 		const AAnimal* i = new Cat();
+
+
+
 		delete j;//should not create a leak
 		delete i;
 
@@ -38,5 +41,6 @@ int main()
 		const AAnimal* dog = new Cat();
 		std::cout << dog->getType() << " " << std::endl;
 		dog->makeSound();
+		delete dog;
 	}
 }

@@ -16,6 +16,8 @@ class Cat : public Animal {
 
 		Cat &operator=(Cat const &rhs);
 		void makeSound(void) const;
+		void printIdeas( void ) const;
+		void setIdeas( std::string idea );
 
 	private:
 

@@ -24,6 +24,12 @@ int main()
 		i = 0;
 		while (i < 10)
 		{
+			pet[i++]->makeSound();
+			pet[i++]->makeSound();
+		}
+		i = 0;
+		while (i < 10)
+		{
 			delete pet[i];
 			i++;
 		}
@@ -31,9 +37,18 @@ int main()
 
 	{
 		Animal *dog = new Dog();
-		dog->setIdeas("cozy");
+		Animal *cat = new Cat();
+
+
+		cat->setIdeas("cat want to play");
+		cat->printIdeas();
+
+		dog->setIdeas("dog wanna sleep");
 		dog->printIdeas();
+
+		// std::cout << std::endl;
 		delete dog;
+		delete cat;
 
 	}
 

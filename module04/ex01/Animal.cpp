@@ -1,5 +1,9 @@
 #include "Animal.hpp"
 
+// ************************************************************************** //
+//                          Constructor / Destructor                 	 	  //
+// ************************************************************************** //
+
 Animal::Animal(void) {
 
 	std::cout << "Constructor Animal Default call" << std::endl;
@@ -19,11 +23,20 @@ Animal::~Animal(void) {
 	return ;
 }
 
+// ************************************************************************** //
+//                          Assignement Operator                      	 	  //
+// ************************************************************************** //
+
 Animal &Animal::operator=(Animal const &rhs) {
 
 	this->type = rhs.type;
 	return (*this);
 }
+
+// ************************************************************************** //
+//                          	Member Functions	                  	 	  //
+// ************************************************************************** //
+
 
 void Animal::printIdeas( void ) const {
 
@@ -36,6 +49,10 @@ void Animal::makeSound(void) const {
 	std::cout << "ZZZzzzzz..!" << std::endl;
 	return ;
 }
+
+// ************************************************************************** //
+//                          		Accessor            	          	 	  //
+// ************************************************************************** //
 
 std::string const Animal::getType(void) const {
 

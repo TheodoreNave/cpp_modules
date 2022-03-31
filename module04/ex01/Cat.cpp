@@ -1,5 +1,9 @@
 #include "Cat.hpp"
 
+// ************************************************************************** //
+//                          Constructor / Destructor                 	 	  //
+// ************************************************************************** //
+
 Cat::Cat(void) {
 
 	this->cerv = new Brain();
@@ -24,14 +28,33 @@ Cat::~Cat(void) {
 	return ;
 }
 
+// ************************************************************************** //
+//                          Assignement operator 		              	 	  //
+// ************************************************************************** //
+
 Cat &Cat::operator=(Cat const &rhs) {
 
 	this->type = rhs.type;
 	return (*this);
 }
 
+// ************************************************************************** //
+//                      	  	 Member Functions                 	 	 	  //
+// ************************************************************************** //
+
+void Cat::printIdeas( void ) const {
+
+	cerv->printId();
+ 	return ;
+}
+
 void Cat::makeSound(void) const {
 
 	std::cout << "MIAOUU..!" << std::endl;
 	return ;
+}
+
+void Cat::setIdeas( std::string idea ) {
+
+	this->cerv->setIdeas(idea);
 }

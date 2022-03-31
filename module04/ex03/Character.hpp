@@ -10,8 +10,11 @@ class Character : public ICharacter {
 
 	protected:
 
-		std::string _name;
-		AMateria* item[4];
+		std::string 		_name;
+		AMateria* 			item[4];
+		static int			tg;
+		static int			no_item;
+		AMateria* 			copy[4];
 
 	public:
 
@@ -22,6 +25,7 @@ class Character : public ICharacter {
 
 		Character &operator=(Character const &rhs);
 
+		void delete_this(AMateria *tab);
 		std::string const & getName() const;
 		void equip(AMateria* m);
 		void unequip(int idx);
