@@ -21,7 +21,7 @@ RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &src)  : AFo
 bool RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 
 	if (executor.getGrade() > this->getGradeExec())
-		throw AForm::GradeTooLowException(); // Exception plus pertinente
+		throw AForm::GradeTooLowException();
 	else
 		setRobot();
 	return false;

@@ -10,19 +10,19 @@ class Bureaucrat {
 
 	private:
 
+		Bureaucrat( void );
 		std::string const	_name;
 		int 				_grade;
 
 	public:
 
-		Bureaucrat( void );
 		Bureaucrat( std::string name, int grade );
 		Bureaucrat( Bureaucrat const &src );
 		~Bureaucrat( void );
 
 		Bureaucrat &operator=(Bureaucrat const &rhs);
 
-		std::string getName( void ) const ;
+		std::string const getName( void ) const ;
 		int getGrade( void ) const ;
 		void checkGrade( void );
 		void increm( void );
@@ -41,7 +41,6 @@ class Bureaucrat {
 
 				virtual const char* what() const throw();
 		};
-
 
 };
 

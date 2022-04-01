@@ -21,7 +21,7 @@ PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const &sr
 bool PresidentialPardonForm::execute(Bureaucrat const & executor) const {
 
 	if (executor.getGrade() > this->getGradeExec())
-		throw AForm::GradeTooLowException(); // Exception plus pertinente
+		throw AForm::GradeTooLowException();
 	else
 		setPardon();
 	return false;

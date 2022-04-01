@@ -21,7 +21,7 @@ ShrubberyCreationForm::ShrubberyCreationForm( ShrubberyCreationForm const &src) 
 bool ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 
 	if (executor.getGrade() > this->getGradeExec())
-		throw AForm::GradeTooLowException(); // Exception plus pertinente
+		throw AForm::GradeTooLowException();
 	else
 		setTree();
 	return false ;

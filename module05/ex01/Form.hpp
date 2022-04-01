@@ -12,24 +12,10 @@ class Form {
 
 	private:
 
-		const std::string  	_name;
+		std::string const  	_name;
 		bool 				_form_signed;
-		const int 			_grade_sign;
-		const int 			_grade_exec;
-
-	class GradeTooHighException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
-
-	class GradeTooLowException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
+		int const			_grade_sign;
+		int const			_grade_exec;
 
 	public:
 
@@ -40,15 +26,29 @@ class Form {
 
 		Form &operator=(Form const &rhs);
 
-		std::string getName( void ) const ;
+		std::string const getName( void ) const ;
 		int getGrade( void ) const ;
 		void increm( void );
 		void decrem( void );
 		void beSigned(Bureaucrat const &office);
-		std::string getFormName() const;
+		std::string const getFormName() const;
 		bool getFormSigned() const;
 		int getGradeSign() const;
 		int getGradeExec() const;
+
+		class GradeTooHighException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
+
+		class GradeTooLowException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
 
 
 };

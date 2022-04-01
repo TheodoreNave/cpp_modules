@@ -4,8 +4,8 @@
 
 int main () {
 
-	Bureaucrat greg;
-	Bureaucrat theo;
+	Bureaucrat greg("greg", 150);
+	Bureaucrat theo("theo", 1);
 
 	try
 	{

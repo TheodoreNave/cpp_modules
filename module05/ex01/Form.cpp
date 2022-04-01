@@ -1,6 +1,6 @@
 #include "Form.hpp"
 
-Form::Form( void ) : _name("default_form"), _form_signed(false), _grade_sign(23), _grade_exec(70) {
+Form::Form( void ) : _name("default_form"), _form_signed(false), _grade_sign(150), _grade_exec(150) {
 
 	std::cout << "Form with default form called" << std::endl;
 	return ;
@@ -8,11 +8,11 @@ Form::Form( void ) : _name("default_form"), _form_signed(false), _grade_sign(23)
 
 Form::Form( std::string name, int grade_sign, int grade_exec ) : _name(name), _form_signed(false), _grade_sign(grade_sign), _grade_exec(grade_exec) {
 
+	std::cout << "Form with named assign called" << std::endl;
 	if (this->_grade_exec < 1 || this->_grade_sign < 1)
 		throw Form::GradeTooHighException();
 	if (this->_grade_exec > 150 || this->_grade_sign > 150)
 		throw Form::GradeTooLowException();
-	std::cout << "Form with named assign called" << std::endl;
 	return ;
 }
 
@@ -30,7 +30,7 @@ Form::~Form( void ) {
 	std::cout << "Form destructor called" << std::endl;
 }
 
-std::string Form::getFormName() const {
+std::string const Form::getFormName() const {
 
 	return (this->_name);
 }
@@ -40,12 +40,12 @@ bool Form::getFormSigned() const {
 	return (this->_form_signed);
 }
 
-int Form::getGradeSign() const {
+int	Form::getGradeSign() const {
 
 	return (this->_grade_sign);
 }
 
-int Form::getGradeExec() const {
+int	Form::getGradeExec() const {
 
 	return (this->_grade_exec);
 }
@@ -56,7 +56,6 @@ Form &Form::operator=(Form const &rhs) {
 
 	return (*this);
 }
-
 
 void Form::beSigned(Bureaucrat const &office) {
 
@@ -72,7 +71,6 @@ std::ostream &operator<<(std::ostream &o, Form const &rhs) {
 	o << rhs.getFormName() << " grade to sign : " << rhs.getGradeSign() << ", and need the grade to execute : " << rhs.getGradeExec();
 	return o;
 }
-
 
 const char* Form::GradeTooHighException::what() const throw() {
 

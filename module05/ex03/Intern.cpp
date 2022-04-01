@@ -51,25 +51,9 @@ void Intern::signForm(AForm &form) {
 	return ;
 }
 
-Form* Intern::makeForm( std::string form_name, std::string form_target ) {
+AForm* Intern::makeForm( std::string form_name, std::string form_target ) {
 
 
-	// change to try / catch
-	if (form_name)
-		std::cout << "Intern creates " << form_name << std::endl
-	else
-		std::cout << "No form name";
-
-	// return form_name;
-}
-
-void Intern::executeForm( AForm const & form ) {
-
-	if (form.execute(*this))
-		std::cout << this->getName() << " executed " << form.getFormName() << std::endl;
-	else
-		std::cout << this->getName() << " failed to execute " << form.getFormName() << std::endl;
-	return ;
 }
 
 const char* Intern::GradeTooHighException::what() const throw() {
