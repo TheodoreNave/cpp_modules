@@ -4,18 +4,26 @@
 
 int main () {
 
-	Bureaucrat tim("tim", 11);
-	Bureaucrat theo("theo", 10);
+	Bureaucrat tim("tim", 5);
+	Bureaucrat theo("theo", 5);
 	Bureaucrat laura("laura", 55);
-	Form paper("paper", 11, 11);
+	Form paper("paper", 5, 5);
 	Form paper2("paper_two", 150, 150);
 	Form paper3("paper_three", 40, 45);
 
 	try
 	{
+		Bureaucrat tim("tim", 0);
+	}
+	catch (std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	try
+	{
 		theo.signForm(paper);
 		paper.beSigned(theo);
-		// theo.signForm(paper);
 		std::cout << theo << std::endl;
 		theo.decrem();
 		theo.decrem();

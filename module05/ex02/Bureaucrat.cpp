@@ -78,7 +78,7 @@ void Bureaucrat::signForm(AForm &form) {
 	else
 	{
 		std::cout << this->getName() << " couldn’t sign " << form.getFormName() << " because ";
-		std::cout << "Grade too low." << std::endl;
+		std::cout << "it's not the correct form." << std::endl;
 	}
 	return ;
 }
