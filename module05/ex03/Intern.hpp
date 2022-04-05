@@ -5,46 +5,33 @@
 #include <iostream>
 #include <stdexcept>
 #include "AForm.hpp"
-
-class AForm;
-
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 class Intern {
 
 	private:
 
-		std::string _name;
+		AForm *(Intern::*fct[3])( std::string target );
 
 	public:
 
 		Intern( void );
-		Intern( std::string name);
 		Intern( Intern const &src );
 		~Intern( void );
 
+
+		AForm* _presidential(std::string target);
+		AForm* _Shrubbery(std::string target);
+		AForm* _Robotomy(std::string target);
 		Intern &operator=(Intern const &rhs);
 
-		std::string getName( void ) const ;
-		int getGrade( void ) const ;
-		void signForm(AForm &form);
-		void increm( void );
-		void decrem( void );
-		void executeForm( AForm const & form );
 		AForm* makeForm( std::string form_name, std::string form_target );
 
-		class GradeTooHighException  : public std::exception {
-
+		class FormDoesntExist : public std::exception {
 			public:
-
 				virtual const char* what() const throw();
 		};
-
-		class GradeTooLowException  : public std::exception {
-
-			public:
-
-				virtual const char* what() const throw();
-		};
-
 };
 
 std::ostream &operator<<(std::ostream &o, Intern const &rhs);

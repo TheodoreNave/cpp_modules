@@ -14,13 +14,13 @@ class AForm {
 
 	private:
 
-		const std::string  	_name;
+		std::string	const	 _name;
 		bool 				_form_signed;
-		const int 			_grade_sign;
-		const int 			_grade_exec;
-		std::string 	_target;
-		AForm( void );
+		int const			_grade_sign;
+		int const 			_grade_exec;
+		std::string 		_target;
 
+		AForm( void );
 
 	public:
 
@@ -30,7 +30,7 @@ class AForm {
 
 		AForm &operator=(AForm const &rhs);
 
-		std::string getName( void ) const ;
+		std::string const getName( void ) const ;
 		void set_sign(bool sign);
 		int getGrade( void ) const ;
 		void increm( void );
@@ -44,18 +44,25 @@ class AForm {
 		std::string getTarget( void ) const;
 
 		virtual bool execute(Bureaucrat const & executor) const = 0;
-	
+
 		class GradeTooHighException  : public std::exception {
-		
+
 			public:
-	
+
 				virtual const char* what() const throw();
 		};
-	
+
 		class GradeTooLowException  : public std::exception {
-		
+
 			public:
-	
+
+				virtual const char* what() const throw();
+		};
+		
+		class FormNotSignedException  : public std::exception {
+
+			public:
+
 				virtual const char* what() const throw();
 		};
 };

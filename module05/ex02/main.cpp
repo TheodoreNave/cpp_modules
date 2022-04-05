@@ -14,16 +14,16 @@ int main () {
 	// AForm paper3("paper_three", 40, 40);
 	ShrubberyCreationForm shrub("theo");
 	PresidentialPardonForm pre("tim");
-	RobotomyRequestForm robot("laura");
+	RobotomyRequestForm robot;
 
 
 	try
 	{
-		Bureaucrat theo("theo", 137);
+		Bureaucrat theo("theo", 1);
 		// AForm paper("paper", 11, 11);
 		// paper.beSigned(theo);
 		// theo.signForm(paper);
-		shrub.execute(theo);
+		// shrub.execute(theo);
 		pre.execute(theo);
 		robot.execute(theo);
 		// Bureaucrat theo = Bureaucrat("theo", 20);

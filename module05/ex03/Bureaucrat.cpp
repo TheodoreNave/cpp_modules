@@ -2,15 +2,15 @@
 
 Bureaucrat::Bureaucrat( void ) : _name("no_name"), _grade(0) {
 
-	checkGrade();
 	std::cout << "Bureaucrat default Constructor called" << std::endl;
+	checkGrade();
 	return ;
 }
 
 Bureaucrat::Bureaucrat( std::string name, int grade ) : _name(name), _grade(grade) {
 
-	checkGrade();
 	std::cout << "Bureaucrat Constructor called" << std::endl;
+	checkGrade();
 	return ;
 }
 
@@ -48,7 +48,7 @@ int Bureaucrat::getGrade( void ) const {
 	return this->_grade;
 }
 
-void	Bureaucrat::checkGrade( void ) const {
+void 	Bureaucrat::checkGrade( void ) const {
 
 	if (this->_grade < 1)
 		throw Bureaucrat::GradeTooHighException ();
@@ -63,7 +63,6 @@ void Bureaucrat::increm( void ) {
 	checkGrade();
 	return ;
 }
-
 
 void Bureaucrat::decrem( void ) {
 

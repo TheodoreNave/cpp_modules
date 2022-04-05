@@ -9,21 +9,6 @@
 
 class RobotomyRequestForm : public AForm {
 
-
-	class GradeTooHighException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
-
-	class GradeTooLowException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
-
 	public:
 
 		RobotomyRequestForm( void );
@@ -34,8 +19,22 @@ class RobotomyRequestForm : public AForm {
 		RobotomyRequestForm &operator=(RobotomyRequestForm const &rhs);
 		bool					execute(Bureaucrat const &executor) const;
 		void setRobot() const ;
-};
 
+		class GradeTooHighException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
+
+		class GradeTooLowException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
+
+};
 std::ostream &operator<<(std::ostream &o, RobotomyRequestForm const &rhs);
 
 #endif

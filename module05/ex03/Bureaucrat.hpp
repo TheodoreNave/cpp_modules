@@ -15,7 +15,6 @@ class Bureaucrat {
 		std::string const 	_name;
 		int 				_grade;
 
-
 	public:
 
 		Bureaucrat( void );
@@ -25,8 +24,8 @@ class Bureaucrat {
 
 		Bureaucrat &operator=(Bureaucrat const &rhs);
 
-		std::string const getName( void ) const ;
-		int getGrade( void ) const ;
+		std::string const getName( void ) const;
+		int getGrade( void ) const;
 		void checkGrade( void ) const;
 		void signForm(AForm &form);
 		void increm( void );

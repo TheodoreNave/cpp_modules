@@ -1,18 +1,18 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm( void ) : AForm("default_robot", 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm( void ) : AForm("default_pre", 25, 5) {
 
 	this->setTarget("Robot");
 	return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm ( std::string target ) : AForm("PresidentialPardonForm", 145, 137) {
+PresidentialPardonForm::PresidentialPardonForm ( std::string target ) : AForm("PresidentialPardonForm", 25, 5) {
 
 	this->setTarget(target);
 	return ;
 }
 
-PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const &src)  : AForm("default_shrub", 145, 137) {
+PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const &src)  : AForm("default_pre", 25, 5) {
 
 	*this = src;
 	return;
@@ -20,8 +20,10 @@ PresidentialPardonForm::PresidentialPardonForm( PresidentialPardonForm const &sr
 
 bool PresidentialPardonForm::execute(Bureaucrat const & executor) const {
 
+	if (this->getFormSigned() == false)
+		throw AForm::FormNotSignedException();
 	if (executor.getGrade() > this->getGradeExec())
-		throw AForm::GradeTooLowException(); // Exception plus pertinente
+		throw AForm::GradeTooLowException();
 	else
 		setPardon();
 	return false;

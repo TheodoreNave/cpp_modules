@@ -6,13 +6,13 @@ RobotomyRequestForm::RobotomyRequestForm( void ) : AForm("default_robot", 72, 45
 	return ;
 }
 
-RobotomyRequestForm::RobotomyRequestForm ( std::string target ) : AForm("RobotomyRequestForm", 145, 137) {
+RobotomyRequestForm::RobotomyRequestForm ( std::string target ) : AForm("RobotomyRequestForm", 72, 45) {
 
 	this->setTarget(target);
 	return ;
 }
 
-RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &src)  : AForm("default_shrub", 145, 137) {
+RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &src)  : AForm("default_robot", 72, 45) {
 
 	*this = src;
 	return;
@@ -20,6 +20,8 @@ RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const &src)  : AFo
 
 bool RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 
+	if (this->getFormSigned() == false)
+		throw AForm::FormNotSignedException();
 	if (executor.getGrade() > this->getGradeExec())
 		throw AForm::GradeTooLowException();
 	else

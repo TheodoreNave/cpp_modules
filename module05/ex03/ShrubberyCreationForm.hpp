@@ -16,20 +16,6 @@ class ShrubberyCreationForm : public AForm {
 
 		ShrubberyCreationForm( void );
 
-	class GradeTooHighException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
-
-	class GradeTooLowException  : public std::exception {
-
-		public:
-
-			virtual const char* what() const throw();
-	};
-
 	public:
 
 		ShrubberyCreationForm( std::string name);
@@ -39,6 +25,20 @@ class ShrubberyCreationForm : public AForm {
 		ShrubberyCreationForm &operator=(ShrubberyCreationForm const &rhs);
 		bool					execute(Bureaucrat const &executor) const;
 		void setTree() const ;
+
+		class GradeTooHighException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
+
+		class GradeTooLowException  : public std::exception {
+
+			public:
+
+				virtual const char* what() const throw();
+		};
 };
 
 std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &rhs);
