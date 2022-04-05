@@ -7,6 +7,7 @@
 #include <map>
 #include <iterator>
 #include <list>
+#include <ctime>
 
 class Span {
 
@@ -20,7 +21,8 @@ class Span {
 		void addNumber( int num );
 		int shortestSpan( void );
 		int longestSpan( void );
-
+		int randomNumber( void );
+		void addRandomNumber(void);
 
 		class notFound : public std::exception {
 
@@ -32,7 +34,8 @@ class Span {
 	private:
 
 		Span( void );
-		std::vector<int> vec;
+		std::vector<int> 	vec;
+		unsigned int 		_n;
 
 };
 
