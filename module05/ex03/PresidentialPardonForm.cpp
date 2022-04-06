@@ -41,6 +41,11 @@ void PresidentialPardonForm::setPardon( void ) const {
 	std::cout << getTarget() << " has been forgiven by Zaphod Beeblebrox" << std::endl;
 }
 
+std::ostream &operator<<(std::ostream &o, PresidentialPardonForm const &rhs) {
+
+	o << rhs.getFormName() << " grade to sign : " << rhs.getGradeSign() << ", and need the grade to execute : " << rhs.getGradeExec();
+	return o;
+}
 
 PresidentialPardonForm::~PresidentialPardonForm( void ) {
 	return ;

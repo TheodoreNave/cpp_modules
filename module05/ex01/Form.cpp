@@ -24,7 +24,6 @@ Form::Form( Form const &src ) : _name(src.getFormName()), _form_signed(src.getFo
 	return ;
 }
 
-
 Form::~Form( void ) {
 
 	std::cout << "Form destructor called" << std::endl;

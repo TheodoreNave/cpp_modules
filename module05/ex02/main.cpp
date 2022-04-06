@@ -7,60 +7,69 @@
 
 int main () {
 
-	// Bureaucrat greg();
-
 	Bureaucrat tim("tim", 11);
-	// AForm paper2("paper_two", 150, 150);
-	// AForm paper3("paper_three", 40, 40);
-	ShrubberyCreationForm shrub("theo");
-	PresidentialPardonForm pre("tim");
-	RobotomyRequestForm robot;
+	ShrubberyCreationForm shrub("shrub");
+	PresidentialPardonForm pre("trump");
+	RobotomyRequestForm robot("robot");
 
-
+	std::cout << "--------------Bureaurat Theo Test Presidential + Robotomy------------------" << std::endl;
 	try
 	{
 		Bureaucrat theo("theo", 1);
-		// AForm paper("paper", 11, 11);
-		// paper.beSigned(theo);
-		// theo.signForm(paper);
-		// shrub.execute(theo);
+		pre.beSigned(theo);
+		theo.signForm(pre);
+		robot.beSigned(theo);
+		theo.signForm(robot);
 		pre.execute(theo);
 		robot.execute(theo);
-		// Bureaucrat theo = Bureaucrat("theo", 20);
 
 	}
 	catch (std::exception & e)
 	{
-		// std::cout << theo << std::endl;
-		// std::cout << paper << std::endl;
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << pre << std::endl;
+	std::cout << robot << std::endl;
 
+	std::cout << "--------------Bureaurat Tim Test Presidential + Shrubbery------------------" << std::endl;
 	try
 	{
-		// Bureaucrat tim = Bureaucrat("tim", 1);
-		// tim.signForm(paper2);
-		// paper2.beSigned(tim);
+		Bureaucrat tim = Bureaucrat("tim", 70);
+		shrub.beSigned(tim);
+		tim.signForm(shrub);
+		pre.beSigned(tim);
+		tim.signForm(pre);
+		shrub.execute(tim);
+		pre.execute(tim);
 	}
 	catch (std::exception & e)
 	{
 		std::cout << tim << std::endl;
-		// std::cout << paper2 << std::endl;
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << pre << std::endl;
+	std::cout << shrub << std::endl;
 
-	Bureaucrat laura("laura", 55);
+	std::cout << "--------------Bureaurat Laura Test Presidential + Shrubbery------------------" << std::endl;
+
+	Bureaucrat laura("laura", 2);
 
 	try
 	{
-		// laura.signForm(paper3);
-		// paper3.beSigned(laura);
+		pre.beSigned(laura);
+		laura.signForm(pre);
+		shrub.beSigned(laura);
+		laura.signForm(shrub);
+		pre.execute(laura);
+		shrub.execute(laura);
+		robot.execute(laura);
 	}
 	catch (std::exception & e)
 	{
 		std::cout << laura << std::endl;
-		// std::cout << paper3 << std::endl;
 		std::cerr << e.what() << std::endl;
 	}
-
+	std::cout << pre << std::endl;
+	std::cout << robot << std::endl;
+	std::cout << "-----------------------------------Destructor--------------------------------" << std::endl;
 }

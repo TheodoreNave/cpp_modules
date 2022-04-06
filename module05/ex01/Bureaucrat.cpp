@@ -1,6 +1,6 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat( void ) : _name("no_name"), _grade(0) {
+Bureaucrat::Bureaucrat( void ) : _name("no_name"), _grade(1) {
 
 	std::cout << "Bureaucrat default Constructor called" << std::endl;
 	checkGrade();
@@ -22,6 +22,7 @@ Bureaucrat::Bureaucrat( Bureaucrat const &src ) {
 
 Bureaucrat::~Bureaucrat( void ) {
 
+	std::cout << "Bureaucrat Destructor called" << std::endl;
 	return ;
 }
 
@@ -37,7 +38,16 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &rhs) {
 	return o;
 }
 
-std::string Bureaucrat::getName( void ) const {
+void 	Bureaucrat::checkGrade( void ) const {
+
+	if (this->_grade < 1)
+		throw Bureaucrat::GradeTooHighException ();
+	if (this->_grade > 150)
+		throw Bureaucrat::GradeTooLowException ();
+	return ;
+}
+
+std::string const Bureaucrat::getName( void ) const {
 
 	return this->_name;
 }
@@ -47,14 +57,6 @@ int Bureaucrat::getGrade( void ) const {
 	return this->_grade;
 }
 
-void 	Bureaucrat::checkGrade( void ) const {
-
-	if (this->_grade < 1)
-		throw Bureaucrat::GradeTooHighException ();
-	if (this->_grade > 150)
-		throw Bureaucrat::GradeTooLowException ();
-	return ;
-}
 
 void Bureaucrat::increm( void ) {
 

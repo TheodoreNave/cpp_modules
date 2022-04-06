@@ -36,7 +36,7 @@ class AForm {
 		void increm( void );
 		void decrem( void );
 		void beSigned(Bureaucrat const &office);
-		std::string getFormName() const;
+		std::string const getFormName() const;
 		bool getFormSigned() const;
 		int getGradeSign() const;
 		int getGradeExec() const;

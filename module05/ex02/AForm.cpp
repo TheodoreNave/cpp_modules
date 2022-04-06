@@ -8,11 +8,11 @@ AForm::AForm( void ) : _name("default_form"), _form_signed(false), _grade_sign(2
 
 AForm::AForm( std::string name, int grade_sign, int grade_exec ) : _name(name), _form_signed(false), _grade_sign(grade_sign), _grade_exec(grade_exec) {
 
+	std::cout << "AForm with named assign called" << std::endl;
 	if (this->_grade_exec < 1 || this->_grade_sign < 1)
 		throw AForm::GradeTooHighException();
 	if (this->_grade_exec > 150 || this->_grade_sign > 150)
 		throw AForm::GradeTooLowException();
-	std::cout << "AForm with named assign called" << std::endl;
 	return ;
 }
 
@@ -29,7 +29,7 @@ AForm::~AForm( void ) {
 	std::cout << "AForm destructor called" << std::endl;
 }
 
-std::string AForm::getFormName() const {
+std::string const AForm::getFormName() const {
 
 	return (this->_name);
 }

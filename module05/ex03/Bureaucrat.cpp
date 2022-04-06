@@ -1,6 +1,6 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat( void ) : _name("no_name"), _grade(0) {
+Bureaucrat::Bureaucrat( void ) : _name("no_name"), _grade(1) {
 
 	std::cout << "Bureaucrat default Constructor called" << std::endl;
 	checkGrade();
@@ -38,6 +38,15 @@ std::ostream &operator<<(std::ostream &o, Bureaucrat const &rhs) {
 	return o;
 }
 
+void 	Bureaucrat::checkGrade( void ) const {
+
+	if (this->_grade < 1)
+		throw Bureaucrat::GradeTooHighException ();
+	if (this->_grade > 150)
+		throw Bureaucrat::GradeTooLowException ();
+	return ;
+}
+
 std::string const Bureaucrat::getName( void ) const {
 
 	return this->_name;
@@ -48,14 +57,6 @@ int Bureaucrat::getGrade( void ) const {
 	return this->_grade;
 }
 
-void 	Bureaucrat::checkGrade( void ) const {
-
-	if (this->_grade < 1)
-		throw Bureaucrat::GradeTooHighException ();
-	if (this->_grade > 150)
-		throw Bureaucrat::GradeTooLowException ();
-	return ;
-}
 
 void Bureaucrat::increm( void ) {
 
@@ -86,9 +87,9 @@ void Bureaucrat::signForm(AForm &form) {
 void Bureaucrat::executeForm( AForm const & form ) {
 
 	if (form.execute(*this))
-		std::cout << this->getName() << " executed " << form.getFormName() << std::endl;
-	else
 		std::cout << this->getName() << " failed to execute " << form.getFormName() << std::endl;
+	else
+		std::cout << this->getName() << " executed " << form.getFormName() << std::endl;
 	return ;
 }
 

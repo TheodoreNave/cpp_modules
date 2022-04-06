@@ -9,9 +9,12 @@
 
 class RobotomyRequestForm : public AForm {
 
-	public:
+	private:
 
 		RobotomyRequestForm( void );
+
+	public:
+
 		RobotomyRequestForm( std::string name );
 		RobotomyRequestForm( RobotomyRequestForm const &src );
 		~RobotomyRequestForm( void );

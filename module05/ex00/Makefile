@@ -25,7 +25,7 @@ OBJ = $(SRCS:%.cpp=%.o)
 ADDED = echo "\033[92m 👨‍💻 👨‍💻 👨‍💻 Bureaucrat SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)
 
 MAKEFLAGS += --silent
 

@@ -49,6 +49,12 @@ void RobotomyRequestForm::setRobot() const {
 	return ;
 }
 
+std::ostream &operator<<(std::ostream &o, RobotomyRequestForm const &rhs) {
+
+	o << rhs.getFormName() << " grade to sign : " << rhs.getGradeSign() << ", and need the grade to execute : " << rhs.getGradeExec();
+	return o;
+}
+
 RobotomyRequestForm::~RobotomyRequestForm( void ) {
 	return ;
 }

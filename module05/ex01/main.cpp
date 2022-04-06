@@ -11,6 +11,7 @@ int main () {
 	Form paper2("paper_two", 150, 150);
 	Form paper3("paper_three", 40, 45);
 
+	std::cout << "--------------Bureaurat Tim Test------------------" << std::endl;
 	try
 	{
 		Bureaucrat tim("tim", 0);
@@ -20,6 +21,7 @@ int main () {
 		std::cerr << e.what() << std::endl;
 	}
 
+	std::cout << "--------------Bureaurat Theo Test paper-----------" << std::endl;
 	try
 	{
 		theo.signForm(paper);
@@ -38,6 +40,7 @@ int main () {
 		std::cerr << e.what() << std::endl;
 	}
 
+	std::cout << "--------------Bureaurat Tim Test paper2-----------" << std::endl;
 	try
 	{
 		tim.signForm(paper2);
@@ -50,6 +53,7 @@ int main () {
 		std::cerr << e.what() << std::endl;
 	}
 
+	std::cout << "------------Bureaurat Laura Test paper3-----------" << std::endl;
 	try
 	{
 		laura.signForm(paper3);
@@ -61,5 +65,5 @@ int main () {
 		std::cout << paper3 << std::endl;
 		std::cerr << e.what() << std::endl;
 	}
-
+	std::cout << "------------Bureaurat & Form Destructor-----------" << std::endl;
 }

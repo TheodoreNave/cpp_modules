@@ -7,7 +7,7 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME = Bureaucrat
+NAME = Bureaucrat_Form
 
 SRCS =  Bureaucrat.cpp	\
 		Form.cpp		\
@@ -23,10 +23,10 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m 👨‍💻 👨‍💻 👨‍💻 Bureaucrat SUCCESS\033[0m"
+ADDED = echo "\033[92m 👨‍💻 👨‍💻 👨‍💻 Bureaucrat_Form SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)
 
 MAKEFLAGS += --silent
 

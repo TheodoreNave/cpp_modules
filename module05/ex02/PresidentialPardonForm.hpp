@@ -9,11 +9,12 @@
 
 class PresidentialPardonForm : public AForm {
 
+	private:
+		PresidentialPardonForm( void );
 
 	public:
 
-		PresidentialPardonForm( void );
-		PresidentialPardonForm( std::string name );
+		PresidentialPardonForm( std::string target );
 		PresidentialPardonForm( PresidentialPardonForm const &src );
 		~PresidentialPardonForm( void );
 

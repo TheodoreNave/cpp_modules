@@ -73,6 +73,12 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(ShrubberyCreationForm co
 	return (*this);
 }
 
+std::ostream &operator<<(std::ostream &o, ShrubberyCreationForm const &rhs) {
+
+	o << rhs.getFormName() << " grade to sign : " << rhs.getGradeSign() << ", and need the grade to execute : " << rhs.getGradeExec();
+	return o;
+}
+
 ShrubberyCreationForm::~ShrubberyCreationForm ( void ) {
 
 	return ;

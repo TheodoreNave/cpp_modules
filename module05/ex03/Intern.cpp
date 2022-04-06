@@ -51,7 +51,7 @@ AForm* Intern::makeForm( std::string form_name, std::string form_target ) {
 	const int tab[3] = {
 
 		form_name.compare("presidential pardon"),
-		form_name.compare("shrubbesry creation"),
+		form_name.compare("shrubbery creation"),
 		form_name.compare("robotomy request"),
 	};
 

@@ -25,7 +25,7 @@ class Bureaucrat {
 
 		Bureaucrat &operator=(Bureaucrat const &rhs);
 
-		std::string getName( void ) const ;
+		std::string const getName( void ) const ;
 		int getGrade( void ) const ;
 		void checkGrade( void ) const ;
 		void signForm(Form &form);

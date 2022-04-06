@@ -16,7 +16,6 @@ AForm::AForm( std::string name, int grade_sign, int grade_exec ) : _name(name), 
 	return ;
 }
 
-
 AForm::AForm( AForm const &src ) : _name(src.getFormName()), _form_signed(src.getFormSigned()), _grade_sign(src.getGradeSign()), _grade_exec(src.getGradeExec()) {
 
 	*this = src;
