@@ -28,7 +28,7 @@ int main (int ac, char **av) {
 
 	// std::string name4 = "12.45";
 
-	// // ft_stoi(name);
+	// ft_stoi(name);
 
 	// std::cout << "stoi(name) " << c << std::endl;
 	// std::cout << "stoi(name2) " << i  << std::endl;

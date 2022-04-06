@@ -1,25 +1,22 @@
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+-> std::list<int>	// Container templaté
+-> Iterator: container stl d'un pointer
 
-#include <iostream>
-#include <string>
-#include "ClapTrap.hpp"
+std::map<std::string, IOperation*> map1;
+std::vector<int>	v1;
+std::vector<int>	v2(42, 100);
 
-class ScavTrap : virtual public ClapTrap {
+lst1.push_back(1);
+lst1.push_back(17);
+lst1.push_back(42);
 
-	public:
+map1["opA"] = new Operation A;
+map1["opB"] = new Operation B;
 
-		ScavTrap( void );
-		ScavTrap( std::string name );
-		ScavTrap( ScavTrap const &src );
-		ScavTrap &operator=(ScavTrap const &rhs);
-		~ScavTrap( void );
+std::list<int>::const_iterator	it;
+std::list<int>::const_iterator	ite = lst1.end();
 
-		void setValue( void );
-		void guardGate();
 
-	// private:
-
-};
-
-#endif
+for (it = lst1.begin(); it != ite; ++it)
+{
+	std::cout << *it << std::endl;
+}
