@@ -9,7 +9,6 @@ int main ( void ) {
 	Base &b = *a;
 
 	identify(a);
-
 	identify(b);
 
 	return 0;

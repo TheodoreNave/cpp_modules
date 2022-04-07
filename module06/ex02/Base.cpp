@@ -1,12 +1,9 @@
 #include "Base.hpp"
 
-Base::~Base(void) {
+Base::Base(void) {
 
     return ;
 };
-class A : public Base { };
-class B : public Base { };
-class C : public Base { };
 
 Base *generate(void) {
 
@@ -50,7 +47,6 @@ void identify(Base& p) {
 	try {
 		Base &test= dynamic_cast<A &>(p);
 		std::cout << "Conversion is ok" << std::endl;
-		(void)test;
 	}
 	catch ( std::bad_cast &bc) {
 
@@ -60,7 +56,6 @@ void identify(Base& p) {
 	try {
 		Base &test= dynamic_cast<B &>(p);
 		std::cout << "Conversion is ok" << std::endl;
-		(void)test;
 	}
 	catch ( std::bad_cast &bc) {
 
@@ -70,7 +65,6 @@ void identify(Base& p) {
 	try {
 		Base &test= dynamic_cast<C &>(p);
 		std::cout << "Conversion is ok" << std::endl;
-		(void)test;
 	}
 	catch ( std::bad_cast &bc) {
 

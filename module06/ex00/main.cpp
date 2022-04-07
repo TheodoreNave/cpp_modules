@@ -4,10 +4,14 @@
 int main (int ac, char **av) {
 
 	if (ac != 2)
-	 	return 0;
+	{
+		std::cout << "No value entered" << std::endl;
+		return (0);
+	}
 
-	Convert a(av[1]);
-	a.checkWhichConvert();
+	Convert convert(av[1]);
+	// convert.checkWhichConvert();
+	convert.checkWhichConvert();
 
 	// std::string name = "'";
 	// char c;
@@ -28,7 +32,7 @@ int main (int ac, char **av) {
 
 	// std::string name4 = "12.45";
 
-	// ft_stoi(name);
+	// // ft_stoi(name);
 
 	// std::cout << "stoi(name) " << c << std::endl;
 	// std::cout << "stoi(name2) " << i  << std::endl;

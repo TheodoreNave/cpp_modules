@@ -26,8 +26,12 @@ class Convert {
 		int		is_float;
 		int		is_double;
 
+
+		int 	not_print_int;
+		int		not_print_float;
 		int 	stoi;
 
+		int 	error;
 		std::string _value;
 
 	public:
@@ -38,10 +42,9 @@ class Convert {
 		~Convert();
 
 
-
-
+		void overflow();
 		long ft_stoi( std::string s );
-		void ValueConvertor();
+		bool ValueConvertor();
 		void checkWhichConvert();
 		void convert_char();
 		void convert_int();
@@ -59,10 +62,10 @@ class Convert {
 		void print_function_two();
 
 		Convert &operator=(Convert const &rhs);
-		char const getChar();
-		int const getInt();
-		float const getFloat();
-		double const getDouble();
+		char getChar();
+		int getInt();
+		float getFloat();
+		double getDouble();
 		int ft_atoi( std::string str );
 		int	check_sign( std::string str, long int *i, int sign );
 

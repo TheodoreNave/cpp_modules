@@ -9,7 +9,13 @@
 
 NAME = Convert
 
-SRCS =  Convert.cpp	\
+SRCS =  Convert_two.cpp		\
+		Convert_int.cpp		\
+		Convert_char.cpp 	\
+		Convert_float.cpp 	\
+		primeConvertor.cpp \
+		print.cpp			\
+		utils.cpp			\
 		main.cpp
 
 CXX = c++
