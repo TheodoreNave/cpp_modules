@@ -32,11 +32,4 @@ T	max(T &a, T &b) {
 		return (a);
 }
 
-
-
-
-
-
-
-
 #endif

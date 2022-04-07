@@ -7,16 +7,9 @@
 #                                                                            #
 # ************************************************************************** #
 
-NAME = Convert
+NAME = Whatever
 
-SRCS =  Convert_two.cpp		\
-		Convert_int.cpp		\
-		Convert_char.cpp 	\
-		Convert_float.cpp 	\
-		primeConvertor.cpp \
-		print.cpp			\
-		utils.cpp			\
-		main.cpp
+SRCS =  main.cpp
 
 CXX = c++
 
@@ -28,10 +21,10 @@ OBJ = $(SRCS:%.cpp=%.o)
 
 # LIBS =
 
-ADDED = echo "\033[92m 🧮 🧮 🧮 Convert SUCCESS\033[0m"
+ADDED = echo "\033[92m 🧮 🧮 🧮 Whatever SUCCESS\033[0m"
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME) && $(ADDED)
 
 MAKEFLAGS += --silent
 

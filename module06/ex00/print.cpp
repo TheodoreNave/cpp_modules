@@ -1,19 +1,10 @@
 #include "Convert.hpp"
 
-void	Convert::conv_str() {
-
-	this->char_str = "'impossible'";
-	this->int_str = "impossible";
-	this->float_str = _value;
-	this->double_str = _value;
-	return ;
-}
-
 void Convert::print_function() {
 
 	std::cout << "char: " << this->char_str << std::endl;
 	std::cout << "int: " << this->int_str << std::endl;
-	std::cout << "float: " << this->float_str << std::endl;
+	std::cout << "float: " << this->float_str << "f" << std::endl;
 	std::cout << "double: " << this->double_str << std::endl;
 	return ;
 }

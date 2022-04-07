@@ -55,19 +55,28 @@ bool 	Convert::checkIsNanOrInf() {
 
 	if (this->_value.compare("nan") == 0 || this->_value.compare("nanf") == 0)
 	{
-		this->conv_str();
-		this->float_str + "f";
+
+		this->char_str = "'impossible'";
+		this->int_str = "impossible";
+		this->float_str = "nan";
+		this->double_str = "nan";
 		return true;
 	}
 	if (this->_value.compare("+inf") == 0 || this->_value.compare("+inff") == 0)
 	{
-		this->conv_str();
-		this->float_str + "f";
+		this->char_str = "'impossible'";
+		this->int_str = "impossible";
+		this->float_str = "+inf";
+		this->double_str = "+inf";
 		return true;
 	}
 	if (this->_value.compare("-inf") == 0 || this->_value.compare("-inff") == 0)
 	{
-		this->conv_str();
+
+		this->char_str = "'impossible'";
+		this->int_str = "impossible";
+		this->float_str = "-inf";
+		this->double_str = "-inf";
 		return true;
 	}
 	return false;
