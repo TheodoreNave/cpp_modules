@@ -7,26 +7,26 @@
 #include <vector>
 #include <map>
 #include <iterator>
-#include <li§st>
-#include <st§ack>
-§
-template <ty§pename T>
-class Mutant§Stack : public std::stack<T> {
-§
-	public:§
-			§MutantStack( void ) {
-§
-			§	return ;
-			§}
-			§MutantStack( MutantStack<T> const &src ) {
-§
-			§	*this = src;
-			§	return ;
-			§}
-§
-			§MutanStack &operator=( MutanStack<T> const &rhs ) {
-§
-			§	this->c = rhs.c;
+#include <list>
+#include <stack>
+
+template <typename T>
+class MutantStack : public std::stack<T> {
+
+	public:
+			MutantStack( void ) {
+
+				return ;
+			}
+			MutantStack( MutantStack<T> const &src ) {
+
+				*this = src;
+				return ;
+			}
+
+			MutanStack &operator=( MutanStack<T> const &rhs ) {
+
+				this->c = rhs.c;
 				return *this;
 			}
 

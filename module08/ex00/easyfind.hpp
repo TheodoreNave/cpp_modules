@@ -7,13 +7,13 @@
 #include <map>
 #include <iterator>
 #include <list>
+#include <stdio.h>
 
 template <typename T>
 
-typename T::iterator Easyfind( T a, int b ) {
+typename T::iterator easyfind( T &a, int b ){
 
 	return std::find(a.begin(), a.end(), b);
 }
-
 
 #endif
