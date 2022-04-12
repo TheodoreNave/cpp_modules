@@ -21,21 +21,24 @@ class Span {
 		void addNumber( int num );
 		int shortestSpan( void );
 		int longestSpan( void );
-		int randomNumber( void );
+		// int randomNumber( void );
 		void addRandomNumber(void);
 
 		class notFound : public std::exception {
 
 			public :
 
-				virtual const char* what() const throw();
+				virtual const char* what() const throw() {
+
+					return ("NO");
+				}
 		};
 
 	private:
 
 		Span( void );
-		std::vector<int> 	vec;
 		unsigned int 		_n;
+		std::vector<int> 	vec;
 
 };
 
