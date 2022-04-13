@@ -14,37 +14,39 @@ template <typename T>
 class MutantStack : public std::stack<T> {
 
 	public:
-			MutantStack( void ) {
+		MutantStack( void ) {
 
-				return ;
-			}
-			MutantStack( MutantStack<T> const &src ) {
+			return ;
+		}
 
-				*this = src;
-				return ;
-			}
+		MutantStack( MutantStack<T> const &src ) {
 
-			MutanStack &operator=( MutanStack<T> const &rhs ) {
+			*this = src;
+			return ;
+		}
 
-				this->c = rhs.c;
-				return *this;
-			}
+		MutantStack &operator=( MutantStack<T> const &rhs ) {
 
-			~MutantStack( void ) {
+			this->c = rhs.c;
+			return *this;
+		}
 
-				return ;
-			}
+		~MutantStack( void ) {
 
-			typedef typename std::stack<T>::container_type::iterator it; 	// typedef . typename
-			it begin()
-			{
-				return this->c.begin();
-			}
+			return ;
+		}
 
-			it end()
-			{
-				return this->c.end();
-			}
+		typedef typename std::stack<T>::container_type::iterator iterator;
+
+		iterator begin()
+		{
+
+			return this->c.begin();
+		}
+		iterator end()
+		{
+			return this->c.end();
+		}
 };
 
 #endif
