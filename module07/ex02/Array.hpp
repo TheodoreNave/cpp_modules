@@ -11,9 +11,9 @@ class Array {
 
 	public :
 
-		Array<T>( void ) : _n(0), _tab(new T[0]) { }
+		Array<T>( void ) : _n(0), _tab(new T[0]()) { }
 
-		Array<T>( unsigned int n )  : _n(n), _tab(new T[n]) { }
+		Array<T>( unsigned int n )  : _n(n), _tab(new T[n]()) { }
 
 
 		Array<T>( Array const &src ) : _n(src._n), _tab(new T[_n]) {

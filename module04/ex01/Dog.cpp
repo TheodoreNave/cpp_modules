@@ -7,7 +7,6 @@
 Dog::Dog(void) {
 
 	this->cerv = new Brain();
-
 	Animal::type = "Dog";
 
 	std::cout << "Constructor Dog Default call" << std::endl;
@@ -15,6 +14,9 @@ Dog::Dog(void) {
 }
 
 Dog::Dog(Dog const &src) {
+
+	this->cerv = new Brain();
+	Animal::type = "Dog";
 
 	std::cout << "Constructor Dog copy call" << std::endl;
 	*this = src;
